@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AG Html Editor v3</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="sec1">
+        <center>
+            <img src="https://dl.dropbox.com/s/rxan8u0tceokiu7/20200803_111821.png" id="imgface" height="500px">
+        </center>
+        <p class="facep">Free online HTML editor for you to generate your own HTML code for your website. </p><br />
+
+        <center>
+            <button class="continuebtn">Start</button>
+        </center>
+        <br />
+        <p style="color:#000;font-weight:bold ; text-align: center;">Create By<span class="blink_me">
+                <font color="#8600b3"><b>Amit Gajare</b></font>
+            </span></p>
+        <br />
+    </section>
+
+    <!----- Main Section ----->
+    <section class="sec2">
+        <div
+            style="background:linear-gradient(145deg,#ffe530,#ff2525); color: white;border-bottom-right-radius:20px;border-bottom-left-radius:20px;">
+            <h3 style="color:#000; font-family: 'Francois One', sans-serif;padding:10px;text-align:center">AG HTML
+                EDITOR v3</h3>
+        </div><br />
+        <center>
+            <!-- Title bar -->
+            <input id="inputFileNameToSaveAs" placeholder="Filename (e.g. Demo.html)"></input>
+            <!------- textarea ------->
+            <textarea id="code" rows="16" placeholder="Write your code here"></textarea>
+        </center>
+        <!------- Buttons -------->
+        <div class="buttons">
+            <button id="button8" onclick="addelm('()',2)">()</button>
+            <button id="button8" onclick="addelm(o,2)">
+                <>
+            </button>
+            <button id="button8" onclick="addelm(e,2)">/></button>
+            <button id="button8" onclick="addelm('{}',2)">{}</button>
+            <button id="button8" onclick=addelm('""',2)>""</button>
+            <button id="button8" onclick=addelm("''",2)>''</button>
+            <button id="button8" onclick="addelm(':',5)">:</button>
+            <button id="button8" onclick="addelm(';',5)">;</button>
+            <br /><br />
+            <button class="button1" onclick="run()">Run</button>
+            <button class="button2" onclick="myFunction()">Copy Code</button>
+            <button class="button3"><i class="fa fa-share-square-o" aria-hidden="true"></i><a id="whatsapp_link"
+                    rel="nofollow noopener" target="_blank" onclick="new_share()"> Share</a></button>
+            <button class="button4" style="border:0" type="button" onclick="saveTextAsFile()">Download Code</button>
+        </div>
+        <!------ iframe  ------->
+        <center>
+            <iframe id="out" style="width:98vw;height:330px"></iframe>
+        </center>
+        <!------ Footer Area ------->
+        <footer>
+            <div class="copyright" align="center">
+                <script>
+                    document.write('&copy; ');
+                    document.write(new Date().getFullYear());
+                    document.write(' Amit Gajare - All Rights Reserved.');
+                </script>
+            </div>
+        </footer>
+    </section>
+</body>
+<script src=" app.js"></script>
+
+</html>

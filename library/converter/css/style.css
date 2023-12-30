@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "SutonnyMJ";
+  src: local("SutonnyMJ"), url(../fonts/SutonnyMJ.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Baloo Da 2";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Baloo Da 2"), url(../fonts/BalooDa2-400.woff2) format("woff2");
+}
+
+.bijoy_textarea {
+  font-family: SutonnyMJ;
+}
+
+.unicode_textarea {
+  font-family: "Baloo Da 2";
+  font-size: 18px;
+}
+
+.bijoy_button {
+  font-family: "Baloo Da 2";
+  font-size: 18px;
+}
+
+.unicode_button {
+  font-family: "Baloo Da 2";
+  font-size: 18px;
+}
+
+.reset_button {
+  font-family: "Baloo Da 2";
+  font-size: 18px;
+}

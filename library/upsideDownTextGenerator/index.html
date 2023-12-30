@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="https://app.trickbuzz.net/favicon.png" />
+  <title>Upside Down Text Generator</title>
+
+  <!-- Stylesheets -->
+  <link type="text/css" href="https://app.trickbuzz.net/assets/css/bootstrap-5.2.3.min.css" rel="stylesheet" />
+  <link type="text/css" href="https://app.trickbuzz.net/assets/css/ads.css" rel="stylesheet" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737"
+    data-overlays="bottom" crossorigin="anonymous" type="c4d9691b324e17574a509b8c-text/javascript"></script>
+</head>
+
+<body>
+  <nav class="navbar sticky-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="https://app.trickbuzz.net/">
+        <img src="https://app.trickbuzz.net/assets/img/logo.png" alt="TrickBuzz" width="auto" height="30" />
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav aria-label="breadcrumb" class="my-3 p-3 pb-1" style="background-color: #e9ecef">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="text-decoration-none" href="https://trickbuzz.net/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="text-decoration-none" href="https://app.trickbuzz.net/">Library</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Upside Down Text Generator
+        </li>
+      </ol>
+    </nav>
+
+    <div class="row my-3">
+      <div class="col text-center">
+        <div class="col border">
+          <form>
+            <div class="row">
+              <div class="col">
+                <div class="form-check form-check-inline my-3">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="reverse" checked=""
+                      onchange="convertToUpsideDown()" /><label class="form-check-label" for="reverse">
+                      Reverse Text</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="upsideDown" checked=""
+                      onchange="convertToUpsideDown()" /><label class="form-check-label" for="upsideDown">Upside
+                      Down</label>
+                  </div>
+                </div>
+                <textarea oninput="convertToUpsideDown()" rows="7" id="upsideDownTextArea" class="form-control"
+                  placeholder="Paste Text Here Or Start Typing"></textarea>
+                <div class="form-group my-3">
+                  <button type="button" class="btn btn-danger mx-2" onclick="clearUpsideDown()">
+                    Clear
+                  </button>
+                  <button type="button" id="copyButton" class="btn btn-primary mx-2" onclick="copyFunctionUpsideDown()">
+                    Copy
+                  </button>
+                  <button type="button" onclick="downloadFileUpsideDown()" id="create" class="btn btn-success mx-2">
+                    Download
+                  </button>
+                </div>
+                <textarea rows="7" id="upsideDownTextAreaResult" class="form-control"
+                  placeholder="ǝɹǝɥ ɹɐǝddɐ ʅʅᴉʍ ʇxǝʇ uʍop ǝpᴉsdՈ" readonly=""></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-4 py-3" style="background-color: #374f64">
+    <div class="container text-light text-center">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      <a class="link-light text-decoration-none fw-bold" href="https://trickbuzz.net/" target="_blank">TrickBuzz
+        Inc.</a>
+      All Rights Reserved.
+    </div>
+  </footer>
+</body>
+<script src="app.js"></script>
+<script>
+  function copy() {
+    let textarea = document.getElementById("decodeResult");
+    textarea.select();
+    document.execCommand("copy");
+  }
+</script>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://app.trickbuzz.net/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Age Calculator - TrickBuzz</title>
+
+    <!-- Stylesheets -->
+    <link
+      type="text/css"
+      href="https://app.trickbuzz.net/assets/css/bootstrap-5.2.3.min.css"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="https://app.trickbuzz.net/assets/css/ads.css"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="app.js"></script>
+
+    <!-- Adsense Auto Ads -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2274017621360737",
+        enable_page_level_ads: true,
+      });
+    </script>
+  </head>
+
+  <body>
+    <span id="warning-container"><i data-reactroot=""></i></span>
+    <nav class="navbar sticky-top bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="https://app.trickbuzz.net/">
+          <img
+            src="https://app.trickbuzz.net/assets/img/logo.png"
+            alt="TrickBuzz"
+            width="auto"
+            height="30"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <div class="container-fluid f-base-container">
+      <div class="container-lg content-container">
+        <div class="container-fluid tool-box">
+          <div class="main-tool">
+            <nav
+              aria-label="breadcrumb"
+              class="my-3 p-3 pb-1"
+              style="background-color: #e9ecef"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="text-decoration-none" href="https://trickbuzz.net/"
+                    >Home</a
+                  >
+                </li>
+                <li class="breadcrumb-item">
+                  <a
+                    class="text-decoration-none"
+                    href="https://app.trickbuzz.net/"
+                    >Library</a
+                  >
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Age Calculator
+                </li>
+              </ol>
+            </nav>
+            <ul
+              class="list-group d-flex justify-content-center align-items-center list-group-horizontal mb-2"
+            >
+              <li
+                class="list-group-item bg-secondary text-light"
+                aria-current="true"
+              >
+                Select Date of Birth:
+              </li>
+            </ul>
+            <form name="birthday">
+              <ul
+                class="list-group d-flex justify-content-center align-items-center list-group-horizontal"
+              >
+                <li class="list-group-item">
+                  <span class="date">Date</span><b>:</b>
+                  <select name="day" size="1">
+                    <script type="text/javascript">
+                      for (var j = 1; j < 32; j++)
+                        document.write(
+                          "<option value=" + j + ">" + j + "</option>"
+                        );
+                    </script>
+                  </select>
+                </li>
+                <li class="list-group-item">
+                  <span class="date">Month</span><b>:</b>
+                  <select name="month" size="1">
+                    <script type="text/javascript">
+                      for (var i = 1; i < 13; i++)
+                        document.write(
+                          "<option value=" + i + ">" + mS[i - 1] + "</option>"
+                        );
+                    </script>
+                  </select>
+                </li>
+                <li class="list-group-item">
+                  <span class="date">Year</span><b>:</b>
+                  <select name="year" size="1">
+                    <script type="text/javascript">
+                      for (var k = startyear; k <= endyear; k++)
+                        document.write(
+                          "<option value=" + k + ">" + k + "</option>"
+                        );
+                    </script>
+                  </select>
+                </li>
+              </ul>
+
+              <div class="my-3" style="text-align: center">
+                <input
+                  class="btn btn-success fw-bold"
+                  name="start"
+                  onclick="calage()"
+                  value="Calculate"
+                  type="button"
+                />
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="col">
+                    <div class="p-2 text-bg-primary mb-2 fw-bold fs-5 rounded">
+                      You have been living for:
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1"
+                        >Total</span
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="age"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1"
+                        >In Months</span
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="months"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1"
+                        >In Days</span
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="daa"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1"
+                        >In Hours</span
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="hours"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1"
+                        >In Minutes</span
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="min"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1"
+                        >In Seconds</span
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="sec"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1"
+                        >Next Birthday Will Be In</span
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nbday"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer mt-5 py-3" style="background-color: #374f64">
+      <div class="container text-light text-center">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <a
+          class="link-light text-decoration-none fw-bold"
+          href="https://trickbuzz.net/"
+          target="_blank"
+          >TrickBuzz Inc.</a
+        >
+        All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>

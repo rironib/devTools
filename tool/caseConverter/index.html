@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="icon"
+      href="https://app.trickbuzz.net/favicon.png"
+      type="image/x-icon"
+    />
+    <title>
+      Case Converter - Lower case, Upper Case, Camel Case, Pascal Case, Sentence
+      Case, Snake Case
+    </title>
+
+    <!-- Stylesheets -->
+    <link
+      type="text/css"
+      href="https://app.trickbuzz.net/assets/css/bootstrap-5.2.3.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://66toolkit.com/demo/themes/altum/assets/css/custom.css?v=1400"
+    />
+    <link
+      type="text/css"
+      href="https://app.trickbuzz.net/assets/css/ads.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/3200e301de.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <span id="warning-container"><i data-reactroot=""></i></span>
+    <nav class="navbar bg-dark mb-4">
+      <div class="container">
+        <a class="navbar-brand" href="https://app.trickbuzz.net/">
+          <img
+            src="https://app.trickbuzz.net/assets/img/logo.png"
+            alt="TrickBuzz"
+            width="auto"
+            height="30"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <main class="altum-animate altum-animate-fill-none altum-animate-fade-in">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="custom-breadcrumbs small">
+            <li>
+              <a href="https://66toolkit.com/demo/tools">Tools</a>
+              <i class="fa fa-fw fa-angle-right"></i>
+            </li>
+            <li class="active" aria-current="page">Case converter</li>
+          </ol>
+        </nav>
+
+        <div class="row mb-4">
+          <div class="col-12 col-xl d-flex align-items-center mb-3 mb-xl-0">
+            <h1 class="h4 m-0">Case Converter</h1>
+
+            <div class="ml-2">
+              <span
+                data-toggle="tooltip"
+                title=""
+                data-original-title="Convert your text to any kind of text case, such as lowercase, UPPERCASE, camelCase...etc."
+              >
+                <i class="fa fa-fw fa-info-circle text-muted"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="form-group text-center py-2">
+                <button
+                  type="button"
+                  class="btn btn-primary m-1"
+                  onclick="originalText()"
+                >
+                  Original Text
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-info text-light m-1"
+                  onclick="revert()"
+                >
+                  Revert
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger m-1"
+                  onclick="clearCaseConverter()"
+                >
+                  Clear
+                </button>
+                <button
+                  type="button"
+                  id="copyButton"
+                  class="btn btn-success m-1"
+                  onclick="copyFunction()"
+                >
+                  Copy
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary m-1"
+                  onclick="downloadFile()"
+                  id="create"
+                >
+                  Download Text
+                </button>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <textarea
+                  onchange="revertArray()"
+                  oninput="getOriginalText()"
+                  rows="8"
+                  id="caseConverterTextArea"
+                  class="form-control"
+                  placeholder="Paste Text Here Or Start Typing"
+                  spellcheck="false"
+                ></textarea>
+              </div>
+              <div class="form-group text-center py-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary m-1"
+                  onclick="lowerCase()"
+                >
+                  lower case
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary m-1"
+                  onclick="upperCase()"
+                >
+                  UPPER CASE
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-success m-1"
+                  onclick="sentenceCase()"
+                >
+                  Sentence case
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-danger m-1"
+                  onclick="capitalizedCase()"
+                >
+                  Capitalized Case
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-info m-1"
+                  onclick="pascalCase()"
+                >
+                  PascalCase
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-dark m-1"
+                  onclick="alternateCase()"
+                >
+                  aLtErNaTe CaSe
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary m-1"
+                  onclick="inverseCase()"
+                >
+                  iNVERSE cASE
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-success m-1"
+                  onclick="snakeCase()"
+                >
+                  SNAKE_CASE
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-danger m-1"
+                  onclick="camelCase()"
+                >
+                  camelCase
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card mt-5">
+          <div class="card-body">
+            Case Converter is a tool or program that is used to convert text
+            from one case to another. It is a simple but powerful utility that
+            can save time and effort when working with text in various formats.
+            The tool is used to convert text from uppercase to lowercase or from
+            lowercase to uppercase, as well as to capitalize or title-case text.
+            <br /><br />
+            Case Converter is used in a variety of applications, including word
+            processing, programming, and data processing. In word processing, it
+            is used to format text according to specific style guides or to
+            prepare text for publication. In programming, it is used to change
+            the case of variables or identifiers to conform to specific coding
+            standards. In data processing, it is used to standardize the case of
+            data entries, making it easier to search and analyze data.
+            <br /><br />
+            Case Converter is a versatile tool that is available in a variety of
+            formats, including online tools, standalone programs, and plugins
+            for popular text editors. Some online tools are free, while others
+            require payment or offer more advanced features for a fee.
+            Standalone programs and plugins typically offer more advanced
+            features and customization options, but may require more technical
+            knowledge to use effectively.
+            <br /><br />
+            Overall, Case Converter is a useful tool that can help to streamline
+            text processing tasks, making it an essential tool for anyone who
+            works with text regularly.
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h2 class="h4 mb-4">Share</h2>
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <a
+                  href="mailto:?body=https://66toolkit.com/demo/case-converter"
+                  target="_blank"
+                  class="btn btn-gray-100 mb-2 mb-md-0 mr-md-3"
+                  ><i class="fa fa-fw fa-envelope"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://66toolkit.com/demo/case-converter"
+                  target="_blank"
+                  class="btn btn-gray-100 mb-2 mb-md-0 mr-md-3"
+                >
+                  <i class="fab fa-fw fa-facebook"></i>
+                </a>
+                <a
+                  href="https://twitter.com/share?url=https://66toolkit.com/demo/case-converter"
+                  target="_blank"
+                  class="btn btn-gray-100 mb-2 mb-md-0 mr-md-3"
+                >
+                  <i class="fab fa-fw fa-twitter"></i>
+                </a>
+                <a
+                  href="https://pinterest.com/pin/create/link/?url=https://66toolkit.com/demo/case-converter"
+                  target="_blank"
+                  class="btn btn-gray-100 mb-2 mb-md-0 mr-md-3"
+                >
+                  <i class="fab fa-fw fa-pinterest"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/shareArticle?url=https://66toolkit.com/demo/case-converter"
+                  target="_blank"
+                  class="btn btn-gray-100 mb-2 mb-md-0 mr-md-3"
+                >
+                  <i class="fab fa-fw fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.reddit.com/submit?url=https://66toolkit.com/demo/case-converter"
+                  target="_blank"
+                  class="btn btn-gray-100 mb-2 mb-md-0 mr-md-3"
+                >
+                  <i class="fab fa-fw fa-reddit"></i>
+                </a>
+                <a
+                  href="https://wa.me/?text=https://66toolkit.com/demo/case-converter"
+                  class="btn btn-gray-100 mb-2 mb-md-0 mr-md-3"
+                >
+                  <i class="fab fa-fw fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h2 class="h4 mb-4">Popular tools</h2>
+
+          <div class="row" id="popular_tools">
+            <div
+              class="col-12 col-lg-6 mb-4 position-relative"
+              data-tool-id="text_to_speech"
+              data-tool-name="Text to speech"
+            >
+              <div class="card d-flex flex-row h-100 overflow-hidden">
+                <div class="px-3 d-flex flex-column justify-content-center">
+                  <div
+                    class="p-2 bg-primary-100 d-flex align-items-center justify-content-center"
+                  >
+                    <a
+                      href="https://66toolkit.com/demo/text-to-speech"
+                      class="stretched-link"
+                    >
+                      <i class="fa fa-microphone fa-fw text-primary-600"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body text-truncate">
+                  <strong>Text to speech</strong>
+                  <p class="text-truncate small m-0">
+                    Use the Google translator API to generate text to speech
+                    audio.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-lg-6 mb-4 position-relative"
+              data-tool-id="dns_lookup"
+              data-tool-name="DNS Lookup"
+            >
+              <div class="card d-flex flex-row h-100 overflow-hidden">
+                <div class="px-3 d-flex flex-column justify-content-center">
+                  <div
+                    class="p-2 bg-primary-100 d-flex align-items-center justify-content-center"
+                  >
+                    <a
+                      href="https://66toolkit.com/demo/dns-lookup"
+                      class="stretched-link"
+                    >
+                      <i class="fa fa-network-wired fa-fw text-primary-600"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body text-truncate">
+                  <strong>DNS Lookup</strong>
+                  <p class="text-truncate small m-0">
+                    Find A, AAAA, CNAME, MX, NS, TXT, SOA DNS records of a host.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-lg-6 mb-4 position-relative"
+              data-tool-id="website_hosting_checker"
+              data-tool-name="Website hosting checker"
+            >
+              <div class="card d-flex flex-row h-100 overflow-hidden">
+                <div class="px-3 d-flex flex-column justify-content-center">
+                  <div
+                    class="p-2 bg-primary-100 d-flex align-items-center justify-content-center"
+                  >
+                    <a
+                      href="https://66toolkit.com/demo/website-hosting-checker"
+                      class="stretched-link"
+                    >
+                      <i class="fa fa-server fa-fw text-primary-600"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body text-truncate">
+                  <strong>Website hosting checker</strong>
+                  <p class="text-truncate small m-0">
+                    Get the web-host of a given website.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-lg-6 mb-4 position-relative"
+              data-tool-id="ping"
+              data-tool-name="Ping"
+            >
+              <div class="card d-flex flex-row h-100 overflow-hidden">
+                <div class="px-3 d-flex flex-column justify-content-center">
+                  <div
+                    class="p-2 bg-primary-100 d-flex align-items-center justify-content-center"
+                  >
+                    <a
+                      href="https://66toolkit.com/demo/ping"
+                      class="stretched-link"
+                    >
+                      <i class="fa fa-server fa-fw text-primary-600"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body text-truncate">
+                  <strong>Ping</strong>
+                  <p class="text-truncate small m-0">
+                    Ping a website, server or port..
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-lg-6 mb-4 position-relative"
+              data-tool-id="whois_lookup"
+              data-tool-name="Whois Lookup"
+            >
+              <div class="card d-flex flex-row h-100 overflow-hidden">
+                <div class="px-3 d-flex flex-column justify-content-center">
+                  <div
+                    class="p-2 bg-primary-100 d-flex align-items-center justify-content-center"
+                  >
+                    <a
+                      href="https://66toolkit.com/demo/whois-lookup"
+                      class="stretched-link"
+                    >
+                      <i class="fa fa-fingerprint fa-fw text-primary-600"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body text-truncate">
+                  <strong>Whois Lookup</strong>
+                  <p class="text-truncate small m-0">
+                    Get all possible details about a domain name.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-lg-6 mb-4 position-relative"
+              data-tool-id="ip_lookup"
+              data-tool-name="IP Lookup"
+            >
+              <div class="card d-flex flex-row h-100 overflow-hidden">
+                <div class="px-3 d-flex flex-column justify-content-center">
+                  <div
+                    class="p-2 bg-primary-100 d-flex align-items-center justify-content-center"
+                  >
+                    <a
+                      href="https://66toolkit.com/demo/ip-lookup"
+                      class="stretched-link"
+                    >
+                      <i
+                        class="fa fa-search-location fa-fw text-primary-600"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card-body text-truncate">
+                  <strong>IP Lookup</strong>
+                  <p class="text-truncate small m-0">
+                    Get approximate IP details.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://app.trickbuzz.net/assets/js/jquery-3.6.1.js"></script>
+    <script src="https://app.trickbuzz.net/assets/js/popper-1.16.0.min.js"></script>
+    <script src="https://app.trickbuzz.net/assets/js/bootstrap-5.2.3.min.js"></script>
+  </body>
+</html>

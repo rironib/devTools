@@ -1,0 +1,282 @@
+:root {
+    --primary:#fa5a5a;
+   }
+   
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box ;
+   }
+   
+   .imgbox{
+       width:60%;
+       height:60%;
+       border-radius: 10px;
+       border: 2px solid #000;
+   }
+   
+   #button8 {
+       background-color: #6600cc;
+        padding: 5px  10px;
+        border: none;
+        color: white;
+        font-size: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        outline: none ;
+        font-family: 'Francois One', sans-serif;
+   }
+   
+   /*** Footer Css ***/
+   footer{
+       padding: 1em;
+       background: linear-gradient(145deg,#232526,#414345);
+       color: #fff;
+   /**    left: 0;
+       bottom: 0; 
+       position: fixed ;
+       flex-shrink: 0; **/
+       width: 100vw;
+       margin-top: 1em;
+       font-size: 15px;
+       border-top-right-radius:30px;
+       border-top-left-radius:30px;
+       font-family: 'Francois One', sans-serif;
+   }
+   
+   .continuebtn {
+    display:inline-block;
+    outline:none;
+    border:none;
+    padding:10px 25px;
+    transition: 300ms ease-in;
+    padding:10px 20px;
+    margin-bottom:12px;
+    border-radius:2px;
+    color:#fff;
+    background:#f05577;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    background:linear-gradient(to right, #7F00FF,  #E100FF);
+    font-family: 'Francois One', sans-serif;
+   }
+   
+   #imgface {
+    max-width:70%;
+   }
+   
+   .blink_me {
+     animation: blinker 1.3s linear infinite;
+     text-align: center;
+   }
+   
+   @keyframes blinker {
+     50% {
+       opacity: 0;
+     }
+   }
+   
+   .social {
+       justify-content:center;
+       align-items:center;
+   }
+       .social ul{
+       margin:0;
+       padding:0;
+       display:flex;
+       }
+       .social ul li{
+       list-style:none;
+       margin:0 5px;}
+       .social ul li a{
+       position:relative;
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       width:40px;
+       height:40px;
+       border-radius:50%;
+       text-decoration:none;
+       font-size:1.25rem;
+       color:#000;
+       transition:.3s;
+       }
+       .social ul li a:before{
+       content:'';
+       position:absolute;
+       top:0;
+       bottom:0;
+       left:0;
+       right:0;
+       background:#000;
+       border-radius:50%;
+       transform:scale(0);
+       transition:.5s;
+       /*z-index:-1;*/
+       }
+       .social ul li a .fa{
+       transition:.5s;
+       display:block;
+       }
+       .social ul li a:hover .fa{
+       color:#fff;
+       transform:scale(.9);
+       }
+       .social ul li a:hover:before{
+       transform:scale(1);
+       }
+       .social ul .fb a:hover:before{
+       background: #0163e1;
+       }
+       .social ul .ig a:hover:before{
+       background: linear-gradient(45deg,#DB0050,#3307AB);
+       }
+       .social ul .yt a:hover:before{
+       background: red;
+       }
+   
+   .facep{
+       padding: 15px;
+       text-align: center ;
+       font-weight: bold ;
+       font-family: 'Roboto Mono', monospace;
+   }
+   
+   .sec2 {
+    display:none;
+   }
+   
+   .sec3 {
+       display: none;
+   }
+   
+   .sec1 {
+       align:;center;
+   }
+   
+   textarea, iframe{
+   display: block;
+   margin: 10px 0;
+   width: 97vw;
+   border: 2px solid #000;
+   border-radius: 5px;
+   padding: 10px;
+   outline: none;
+   }
+   
+   input {
+     width: 95vw;
+     outline: none;
+     padding: 0.5rem;
+     font-size: 1rem;
+     border: 1px solid #000;
+     border-radius: 3px;
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+   }
+   
+   .buttons{
+       padding: 10px;
+   }
+   
+   .sec_bu{
+       padding: 10px;
+   }
+   
+   #section3 {
+       padding: 15px;
+       font-family: 'Open Sans', sans-serif;
+   }
+   
+   blockquote {
+    width:100%;
+    padding:15px;
+    background:#f5f5f5;
+    color:#333;
+    margin:20px 0;
+    border-left:4px solid #3da1ff;
+   }
+   
+   .button1{
+       background-color: #4d004d;
+        padding: 5px  15px;
+        border: none;
+        color: white;
+        font-size: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        outline: none ;
+        font-family: 'Francois One', sans-serif;
+   }
+   
+   .button2{
+       background-color: #e6005c;
+        padding: 5px  15px;
+        border: none;
+        color: white;
+        font-size: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        outline: none ;
+        font-family: 'Francois One', sans-serif;
+   }
+   
+   .button3{
+       background-color: #009933;
+        padding: 5px  15px;
+        border: none;
+        color: white;
+        font-size: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        outline: none ;
+        font-family: 'Francois One', sans-serif;
+   }
+   
+   .button4{
+       background-color: #ff0000;
+        padding: 5px  15px;
+        border: none;
+        color: white;
+        font-size: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        outline: none ;
+        font-family: 'Francois One', sans-serif;
+   }
+   
+   .button5{
+       background-color: #FEE140;
+        padding: 5px  15px;
+        border: none;
+        color: black;
+        font-weight: bold ;
+        font-size: 11px;
+        border-radius: 2px;
+        cursor: pointer;
+        font-family: 'Francois One', sans-serif;
+        outline: none ;
+   }
+   
+   #button6{
+        background: linear-gradient(145deg,#B91372,#6B0F1A);
+        padding: 5px  15px;
+        border: none;
+        color: #fff;
+        font-size: 11px;
+        border-radius: 2px;
+        cursor: pointer;
+        font-family: 'Francois One', sans-serif;
+        outline: none ;
+   }
+   
+   .button7{
+       padding: 5px  15px;
+        border: none;
+        background: linear-gradient(145deg,#DB3445,#F71735) ;
+        color: #fff;
+        font-size: 11px;
+        border-radius: 2px;
+        cursor: pointer;
+        font-family: 'Francois One', sans-serif;
+        outline: none ;
+   }

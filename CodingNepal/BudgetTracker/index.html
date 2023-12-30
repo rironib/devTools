@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="https://app.trickbuzz.net/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Budget Tracker | TrickBuzz</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="headerBar">
+      <header>
+        <h1 class="title">My Budget Tracker</h1>
+        <h2 class="topbar">Your Current Balance</h2>
+        <p>
+          <span class="currency">$</span>
+          <span class="balance"></span>
+        </p>
+      </header>
+    </div>
+    <main>
+      <div class="content">
+        <h3 class="secondTitle">Add new transactions</h3>
+        <div class="form">
+          <form id="expForm">
+            <div class="flex-2">
+              <div class="formLine">
+                <select id="type">
+                  <option value="chooseOne">Choose Type...</option>
+                  <option value="income">Income</option>
+                  <option value="expense">Expense</option>
+                </select>
+              </div>
+              <div class="formLine">
+                <input type="text" id="name" placeholder="Name" />
+              </div>
+
+              <div class="formLine">
+                <input type="text" id="amount" placeholder="Amount" />
+              </div>
+            </div>
+            <button type="submit" class="buttonSave">
+              Add to transactions
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTable"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

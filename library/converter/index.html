@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="https://app.trickbuzz.net/favicon.png" />
+  <title>Bijoy to Unicode Converter - TrickBuzz</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Bangla Bijoy to Unicode Converter" />
+  <meta name="description" content="Bijoy to Unicode Converter by TrickBuzz is a Text Converter" />
+  <meta name="keywords" content="TrickBuzz,trickbuzz,rironib,RONiB,ronib,RONiB Inc" />
+  <meta name="Developed By" content="TrickBuzz" />
+  <meta name="distribution" content="Global" />
+  <meta name="robots" content="ALL" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://app.trickbuzz.net/library/converter/" />
+  <meta property="og:title" content="Bangla Bijoy to Unicode Converter" />
+  <meta property="og:description" content="Bijoy to Unicode Converter by TrickBuzz is a Text Converter" />
+  <meta property="og:image" content="https://trickbuzz.net/social-image.webp" />
+  <meta property="fb:app_id" content="223622535620471" />
+  <meta property="fb:admins" content="100018333529232" />
+  <meta property="fb:pages" content="102280692211884" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://app.trickbuzz.net/library/converter/" />
+  <meta property="twitter:title" content="Bangla Bijoy to Unicode Converter" />
+  <meta property="twitter:description" content="Bijoy to Unicode Converter by TrickBuzz is a Text Converter" />
+  <meta property="twitter:image" content="https://trickbuzz.net/social-image.webp" />
+
+  <!-- Scripts -->
+  <script src="https://app.trickbuzz.net/assets/js/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="js/bijoy2uni.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/count.js"></script>
+  <script type="text/javascript" src="js/js.js"></script>
+  <script type="text/javascript" src="js/js1.js"></script>
+  <script type="text/javascript" src="js/layout.js"></script>
+  <script type="text/javascript" src="js/uni2bijoy.js"></script>
+
+  <!-- Stylesheets -->
+  <link type="text/css" href="https://app.trickbuzz.net/assets/css/bootstrap-5.2.3.min.css" rel="stylesheet" />
+  <link type="text/css" href="https://app.trickbuzz.net/assets/css/ads.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737"
+    data-overlays="bottom" crossorigin="anonymous" type="c4d9691b324e17574a509b8c-text/javascript"></script>
+</head>
+
+<body>
+  <span id="warning-container"><i data-reactroot=""></i></span>
+  <nav class="navbar sticky-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="https://app.trickbuzz.net/">
+        <img src="https://app.trickbuzz.net/assets/img/logo.png" alt="TrickBuzz" width="auto" height="30" />
+      </a>
+    </div>
+  </nav>
+
+  <div class="container-fluid f-base-container">
+    <div class="container-lg content-container">
+      <div class="container-fluid tool-box">
+        <div class="main-tool">
+          <nav aria-label="breadcrumb" class="my-3 p-3 pb-1" style="background-color: #e9ecef">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a class="text-decoration-none" href="https://trickbuzz.net/">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a class="text-decoration-none" href="https://app.trickbuzz.net/">Library</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Bijoy to Unicode Converter
+              </li>
+            </ol>
+          </nav>
+
+          <div class="row my-3">
+            <div class="col text-center">
+              <div class="col">
+                <form name="myForm" action="#" method="post">
+                  <textarea class="form-control unicode_textarea p-3" rows="7" onKeyPress="return KeyBoardPress(event);"
+                    id="EDT" onKeyDown="return KeyBoardDown(event);" name="textarea" onBlur="InputLengthCheck();"
+                    onKeyUp="InputLengthCheck();" autofocus="autofocus"
+                    placeholder="ইউনিকোড কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
+
+                  <div class="form-group my-3">
+                    <button type="button" class="bijoy_button btn btn-primary m-1"
+                      onClick="ConvertToTextArea('CONVERTEDT');" name="ConvertToAsciiButton">
+                      ইউনিকোড টু বিজয়
+                    </button>
+                    <button type="button" class="unicode_button btn btn-success m-1"
+                      onClick="ConvertFromTextArea('CONVERTEDT');" name="ConvertButton">
+                      বিজয় টু ইউনিকোড
+                    </button>
+                    <button type="reset" class="reset_button btn btn-danger m-1" name="ClearButton">
+                      মুছে ফেলুন
+                    </button>
+                  </div>
+
+                  <textarea class="form-control bijoy_textarea p-3" rows="7" id="CONVERTEDT" autofocus
+                    placeholder="বিজয় কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-5 py-3" style="background-color: #374f64">
+    <div class="container text-light text-center">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      <a class="link-light text-decoration-none fw-bold" href="https://trickbuzz.net/" target="_blank">TrickBuzz
+        Inc.</a>
+      All Rights Reserved.
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f6fc;
+}
+
+h1 {
+  background-color: #d3e3fd;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
