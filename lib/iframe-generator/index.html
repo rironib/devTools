@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon" />
+  <title>Iframe Generator</title>
+
+  <!-- Stylesheets -->
+  <link type="text/css" href="https://app.trickbuzz.net/assets/css/bootstrap-5.2.3.min.css" rel="stylesheet" />
+  <link type="text/css" href="https://app.trickbuzz.net/assets/css/ads.css" rel="stylesheet" />
+
+  <!-- Script -->
+  <script src="https://app.trickbuzz.net/assets/js/jquery-3.6.1.min.js"></script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737"
+    data-overlays="bottom" crossorigin="anonymous" type="c4d9691b324e17574a509b8c-text/javascript"></script>
+</head>
+
+<body>
+  <nav class="navbar sticky-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="https://app.trickbuzz.net/">
+        <img src="https://app.trickbuzz.net/assets/img/logo.png" alt="TrickBuzz" width="auto" height="30" />
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav aria-label="breadcrumb" class="my-3 p-3 pb-1" style="background-color: #e9ecef">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="text-decoration-none" href="https://trickbuzz.net/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="text-decoration-none" href="https://app.trickbuzz.net/">Library</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Iframe Generator
+        </li>
+      </ol>
+    </nav>
+
+    <div class="row">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Width</span>
+        <input type="text" name="width" id="iframewidth" placeholder="1280" class="form-control"
+          aria-label="Width in Pixel" />
+        <span class="input-group-text">px</span>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Height</span>
+        <input type="text" name="height" id="iframeheight" placeholder="720" class="form-control"
+          aria-label="Height in Pixel" />
+        <span class="input-group-text">px</span>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Link</span>
+        <input type="text" name="url" id="url" class="form-control" placeholder="https://app.trickbuzz.net/"
+          aria-label="Link" aria-describedby="basic-addon1" />
+      </div>
+      <div class="text-center py-2">
+        <button type="submit" class="btn btn-primary m-2" id="generate">
+          Generate
+        </button>
+        <button type="submit" class="btn btn-success m-2" onclick="copy()">
+          Copy to Clipboard
+        </button>
+      </div>
+
+      <div class="input-group pt-2">
+        <span class="input-group-text">Iframe</span>
+        <textarea class="form-control" aria-label="With textarea" id="iframecode"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-5 py-3" style="background-color: #374f64">
+    <div class="container text-light text-center">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      <a class="link-light text-decoration-none fw-bold" href="https://trickbuzz.net/" target="_blank">TrickBuzz
+        Inc.</a>
+      All Rights Reserved.
+    </div>
+  </footer>
+</body>
+<script src="app.js"></script>
+
+<script>
+  function copy() {
+    let textarea = document.getElementById("iframecode");
+    textarea.select();
+    document.execCommand("copy");
+  }
+</script>
+
+</html>
