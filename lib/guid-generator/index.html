@@ -1,188 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>
-        Online GUID Generator - Get Unique UUIDs For Free
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon" />
+    <title>GUID Generator</title>
 
-    <meta name="description"
-        content="Free and online GUID Generator tool that creates GUIDs (Globally Unique Identifiers) or UUIDs (Universally Unique Identifiers) that you can use as an identifier for anything.">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" as="style"
-        onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
-    <noscript>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    </noscript>
-
-    <link rel="stylesheet" href="https://fossbytes.com/tools/static/baseapp/css/style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737"
         data-overlays="bottom" crossorigin="anonymous" type="c4d9691b324e17574a509b8c-text/javascript"></script>
 </head>
 
-<body>
-    <nav style="border-top: 3px solid #70d7f8;"></nav>
-    <div class="container-fluid f-base-container">
-        <div class="container-lg content-container" style="background-color: #fff; padding-bottom: 20px;">
-            <div class="container-fluid tool-box">
-                <div class="main-tool">
-                    <div class="col">
-                        <div class="row border">
-                            <div class="col-lg-6 border-right">
-                                <form action="/library/guid-generator/" method="post"
-                                    style="padding-top: 18px; padding-bottom: 18px;">
-                                    <form action="index.html" method="post"
-                                        style="padding-top: 18px; padding-bottom: 18px;">
-                                        <div class="form-group row">
-                                            <label for="quantity" class="col-sm-2
-								    col-form-label">Number:</label>
-                                            <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="quantity" value="5"
-                                                    name="quantity">
-                                                <small id="quantity" class="form-text text-muted">How many GUID/UUID do
-                                                    you
-                                                    need?[1-5000] </small>
-                                            </div>
+<body class="font-sans">
+    <header class="bg-gray-800 text-white text-center py-5">
+        <h1 class="text-3xl font-bold">GUID Generator</h1>
+    </header>
 
-                                        </div>
-
-                                        <fieldset class="form-group">
-                                            <div class="row">
-                                                <legend class="col-form-label col-sm-2 pt-0">Format:</legend>
-                                                <div class="col-sm-10">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="hyphen"
-                                                            name="hyphen" checked="">
-                                                        <label class="form-check-label" for="hyphen">
-                                                            Hyphens -
-                                                        </label>
-                                                        <small id="hyphen"
-                                                            class="form-text text-muted">994619fa-b6f6-4854-a69c-367d6099b146</small>
-                                                    </div>
-
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="braces"
-                                                            name="braces">
-                                                        <label class="form-check-label" for="braces">
-                                                            Braces {}
-                                                        </label>
-                                                        <small id="braces"
-                                                            class="form-text text-muted">{1f8ae544-0a45-4418-b5d6-82657d16a5ca}</small>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="uppercase"
-                                                            name="uppercase">
-                                                        <label class="form-check-label" for="uppercase">
-                                                            Uppercase
-                                                        </label>
-                                                        <small id="uppercase"
-                                                            class="form-text text-muted">495336C2-A0E8-44B4-9522-BD9E74AF1D98</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                        <div class="form-group row">
-                                            <div class="col-sm-9">
-                                                <button type="submit" class="btn btn-fossbytes">Generate</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                            </div>
-                            <div class="col-lg-6 card border-0 p-0">
-                                <div class="card-header"
-                                    style="background-color: #fff !important;padding-left: 15px !important;">
-                                    <button id="copyButton"
-                                        class="btn btn-sm btn-success margin-right-5px margin-bottom-5px"
-                                        onclick="copyGUID();">Copy</button>
-                                    <button id="exportCSV"
-                                        class="btn btn-sm btn-success margin-right-5px margin-bottom-5px"
-                                        onclick="download();">Download</button>
-
-
-
-                                </div>
-
-                                <div class="card-body" style="padding: 0">
-                                    <textarea class="form-control border-0" id="ccNumberTextArea"
-                                        style="height: 75%; background-color: #fff !important; min-height: 250px;font-size: 15px; font-weight: bold;font-family:'Lucida Console', monospace">
-100f7bde-78a1-4f7d-8b81-47fdbe92974c
-507e7381-1963-45d7-b677-0b5f1b8f5254
-9602c7f7-4739-4bf2-aedb-de78537e850a
-9ea421d2-bc24-41d2-9caf-7816def2546d
-8f2f7eae-a0ba-496f-8cb8-f0e1600fc1e0</textarea>
-                                </div>
-                                <div class="card-header border-0"
-                                    style="background-color: #fff !important;padding-left: 15px !important;">
-
-                                    <label for="ccNumberTextArea" class="col-form-label"
-                                        style="margin-left: 5px;;"><small class="text-muted"><i>Generated GUID Numbers.
-                                                Refresh this page to get 5 more GUID/UUID.</i></small></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <main class="max-w-screen-md mx-auto p-5">
+        <div class="input mb-4 flex justify-center items-center">
+            <button id="generate" class="bg-gray-800 text-white font-bold py-2 px-4 rounded-md ml-2">Generate
+                GUID</button>
         </div>
+        <div class="output">
+            <textarea id="result" rows="1" placeholder="Generated text will appear here..."
+                class="w-full p-3 border border-gray-300 rounded-md" disabled></textarea>
+        </div>
+        <div class="button mt-4 flex justify-center">
+            <button id="clear" class="bg-red-500 text-white font-bold py-2 px-4 rounded-md">Clear</button>
+            <button id="copy" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-md ml-2">Copy</button>
+        </div>
+    </main>
 
-
-
-
-
-        <script type="text/javascript">
-            var guid_string_list = ['100f7bde-78a1-4f7d-8b81-47fdbe92974c', '507e7381-1963-45d7-b677-0b5f1b8f5254', '9602c7f7-4739-4bf2-aedb-de78537e850a', '9ea421d2-bc24-41d2-9caf-7816def2546d', '8f2f7eae-a0ba-496f-8cb8-f0e1600fc1e0'];
-
-            function copyGUID() {
-                input = document.getElementById('ccNumberTextArea');
-                input.select();
-                var result = document.execCommand('copy');
-                // document.body.removeChild(input);
-                // return result;
-            }
-
-            function download() {
-                guidStr = '';
-                for (i = 0; i < guid_string_list.length; i++) {
-                    guidStr = guidStr + '\n' + guid_string_list[i];
-                }
-                var element = document.createElement('a');
-                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(guidStr));
-                element.setAttribute('download', 'fossbytes_guid.txt');
-
-                element.style.display = 'none';
-                document.body.appendChild(element);
-
-                element.click();
-
-                document.body.removeChild(element);
-            }
-
-        </script>
-    </div>
-
-
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://fossbytes.com/tools/static/baseapp/js/script1.js"></script>
-    <!-- <script src="/static/baseapp/js/script1.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script defer=""
-        src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"></script>
-
-
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
