@@ -77,11 +77,11 @@ updateSlider();
 
 const copyPassword = () => {
   navigator.clipboard.writeText(passwordInput.value); // copying random password
-  copyIcon.innerText = "check"; // changing copy icon to tick
+  copyIcon.innerText = "check_circle"; // changing copy icon to tick
   copyIcon.style.color = "#4285F4";
   setTimeout(() => {
     // after 1500 ms, changing tick icon back to copy
-    copyIcon.innerText = "copy_all";
+    copyIcon.innerText = "content_copy";
     copyIcon.style.color = "#707070";
   }, 1500);
 };
