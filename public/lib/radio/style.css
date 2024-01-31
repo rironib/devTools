@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 html,
 body {
@@ -12,8 +12,7 @@ body {
   background-position: center;
   color: #fff;
   font-size: 1.05rem;
-  font-family: "Oxygen", HelveticaNeue, "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   letter-spacing: 0.025rem;
   line-height: 1.618;
