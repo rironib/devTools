@@ -1,9 +1,0 @@
-# Ignore temporary files
-*.tmp
-*.log
-
-# Ignore IDE-specific files and directories
-.idea/
-.vscode/
-devTools/
-tool/
