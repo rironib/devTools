@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon">
+    <title>IP Checker</title>
+</head>
+
+<body>
+    <header class="bg-gray-800 text-white text-center py-5">
+        <h1 class="text-3xl font-bold">IP Address Checker</h1>
+    </header>
+    <div class="max-w-screen-md mx-auto p-5">
+        <div class="grid grid-cols-3 gap-4 justify-center">
+            <div class="col-span-2">
+                <input type="text" id="ipAddress" class="border rounded-lg p-2 w-full" placeholder="Enter IP Address">
+            </div>
+            <div class="space-x-2">
+                <button id="checkBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+                    type="submit">Check</button>
+                <button id="clearBtn"
+                    class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md">Clear</button>
+            </div>
+        </div>
+        <div id="result" class="my-3"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
