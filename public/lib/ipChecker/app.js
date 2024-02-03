@@ -3,7 +3,7 @@ function getIpInformation(ipAddress) {
   fetch(`https://ipapi.co/${ipAddress}/json/`)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Failed to fetch IP information.");
+        throw new Error("ERROR: Failed to fetch IP information.");
       }
       return response.json();
     })
@@ -12,7 +12,7 @@ function getIpInformation(ipAddress) {
     })
     .catch((error) => {
       console.error(error);
-      displayErrorMessage("IP Address not found.");
+      displayErrorMessage("ERROR: IP Address not found.");
     });
 }
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("https://api.ipify.org?format=json")
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Failed to fetch IP address.");
+        throw new Error("ERROR: Failed to fetch IP address.");
       }
       return response.json();
     })
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => {
       console.error(error);
-      displayErrorMessage("Failed to fetch IP address.");
+      displayErrorMessage("ERROR: Failed to fetch IP address.");
     });
 
   // Handle the "Check" button click
