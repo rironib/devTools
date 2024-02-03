@@ -19,25 +19,28 @@ function getIpInformation(ipAddress) {
 // Function to display IP information
 function displayIpInformation(data) {
   const result = document.getElementById("result");
-  result.innerHTML = `<ul>
-    <li class="bg-blue-500 text-white font-bold py-2 px-4">IP Information:</li>
-    <li class="border p-2"><strong>IP Address:</strong> ${data.ip}</li>
+  result.innerHTML = `<ul class="grid md:grid-cols-2">
+    <li class="border p-2 rounded-t-md md:rounded-tl-md md:rounded-tr-none"><strong>IP Address:</strong> ${data.ip}</li>
+    <li class="border p-2 rounded-none md:rounded-tr-md"><strong>IP Version:</strong> ${data.version}</li>
+    <li class="border p-2"><strong>ISP:</strong> ${data.org}</li>
     <li class="border p-2"><strong>City:</strong> ${data.city}</li>
     <li class="border p-2"><strong>Region:</strong> ${data.region}</li>
+    <li class="border p-2"><strong>Capital:</strong> ${data.country_capital}</li>
     <li class="border p-2"><strong>Country:</strong> ${data.country_name}</li>
-    <li class="border p-2"><strong>ISP:</strong> ${data.org}</li>
+    <li class="border p-2"><strong>Country TLD:</strong> ${data.country_tld}</li>
+    <li class="border p-2"><strong>Region Code:</strong> ${data.region_code}</li>
+    <li class="border p-2"><strong>Postal Code:</strong> ${data.postal}</li>
     <li class="border p-2"><strong>Latitude:</strong> ${data.latitude}</li>
     <li class="border p-2"><strong>Longitude:</strong> ${data.longitude}</li>
-    <li class="border p-2"><strong>Postal Code:</strong> ${data.postal}</li>
     <li class="border p-2"><strong>Timezone:</strong> ${data.timezone}</li>
     <li class="border p-2"><strong>Currency:</strong> ${data.currency}</li>
+    <li class="border p-2"><strong>Currency Name:</strong> ${data.currency_name}</li>
     <li class="border p-2"><strong>Calling Code:</strong> ${data.country_calling_code}</li>
     <li class="border p-2"><strong>Languages:</strong> ${data.languages}</li>
     <li class="border p-2"><strong>ASN:</strong> ${data.asn}</li>
-    <li class="border p-2"><strong>User Agent:</strong> ${navigator.userAgent}</li>
-    <li class="border p-2"><strong>Calling Code:</strong> ${data.country_calling_code}</li>
-    <li class="border p-2"><strong>Capital:</strong> ${data.country_capital}</li>
-    <li class="border p-2"><strong>Region Code:</strong> ${data.region_code}</li>
+    <li class="border p-2"><strong>Organization:</strong> ${data.org}</li>
+    <li class="border p-2"><strong>Hostname:</strong> ${data.hostnamee}</li>
+    <li class="border p-2 md:col-span-2 rounded-b-md"><strong>User Agent:</strong> ${navigator.userAgent}</li>
   </ul>`;
 }
 
