@@ -19,9 +19,10 @@ function getIpInformation(ipAddress) {
 // Function to display IP information
 function displayIpInformation(data) {
   const result = document.getElementById("result");
-  result.innerHTML = `<ul class="grid md:grid-cols-2">
-    <li class="border p-2 rounded-t-md md:rounded-tl-md md:rounded-tr-none"><strong>IP Address:</strong> ${data.ip}</li>
-    <li class="border p-2 rounded-none md:rounded-tr-md"><strong>IP Version:</strong> ${data.version}</li>
+  result.innerHTML = `<ul class="grid md:grid-cols-2 text-left">
+    <li class="dark:bg-slate-700 text-black dark:text-white text-center text-xl font-bold py-2 px-4 md:col-span-2  border rounded-t-md">IP Information</li>
+    <li class="border p-2"><strong>IP Address:</strong> ${data.ip}</li>
+    <li class="border p-2"><strong>IP Version:</strong> ${data.version}</li>
     <li class="border p-2"><strong>ISP:</strong> ${data.org}</li>
     <li class="border p-2"><strong>City:</strong> ${data.city}</li>
     <li class="border p-2"><strong>Region:</strong> ${data.region}</li>
