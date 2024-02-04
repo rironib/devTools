@@ -4,15 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon">
     <title>Color Picker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <header></header>
+<body class="bg-gray-100 dark:bg-slate-900 text-black dark:text-white">
+    <header
+        class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+        <div class="max-w-8xl mx-auto">
+            <div class="py-3 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
+                <a href="/">
+                    <img class="max-h-24" src="https://app.trickbuzz.net/assets/img/logo.png" alt="TrickBuzz">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="container w-[95%] lg:w-[80%] mx-auto">
+        <div class="h-[80vh] flex items-center justify-center">
+            <div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 rounded-xl" id="selectedColor">
+                <div class="flex items-center justify-center p-6">
+                    <input type="color" id="colorPicker" name="colorPicker" value="#ff0000">
+                </div>
+                <div class="bg-white text-black p-4 md:p-10 rounded-b-xl md:rounded-b-none md:rounded-r-xl">
+                    <div class="flex flex-col gap-2">
+                        <p id="hexOutput" class="text-lg">HEX: #000000</p>
+                        <p id="rgbOutput" class="text-lg">RGB: 255, 255, 255</p>
+                        <p id="rgbaOutput" class="text-lg">RGBA: 255, 255, 255, 1</p>
+                        <p id="hsvOutput" class="text-lg">HSV: 0, 0%, 100%</p>
+                        <p id="hslOutput" class="text-lg">HSL: 0, 0%, 100%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-    <main></main>
-
-    <footer></footer>
+    <script src="app.js"></script>
 </body>
 
 </html>
