@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>SSL Checker</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container mx-auto my-8 p-4 bg-white rounded-md shadow-md">
+        <h1 class="text-3xl font-bold mb-4">SSL Checker</h1>
+        <form id="sslForm" class="mb-4">
+            <div class="flex">
+                <label for="url" class="sr-only">Enter website URL:</label>
+                <input type="text" id="url" class="border p-2 w-full" placeholder="Enter website URL">
+            </div>
+            <button type="submit" class="mt-2 bg-blue-500 text-white p-2 rounded-md">Check SSL</button>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
