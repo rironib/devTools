@@ -1,12 +1,19 @@
 function checkSSL() {
-  const domain = document.getElementById("url").value;
   const resultDiv = document.getElementById("result");
 
-  if (!domain) {
-    resultDiv.innerHTML = '<p class="text-red-500">Please enter a domain.</p>';
-    return;
-  }
+  // Handle the "Check" button click
+  document.getElementById("checkBtn").addEventListener("click", function () {
+    const domain = document.getElementById("domain-name").value;
+    if (!domain) {
+      resultDiv.innerHTML =
+        '<p class="text-red-500">Please enter a domain.</p>';
+      return;
+    }
+    getDomainInfo(domain);
+  });
+}
 
+function getDomainInfo(domain) {
   const apiUrl = `https://api.ssllabs.com/api/v3/analyze?host=${domain}`;
 
   fetch(apiUrl)
@@ -20,6 +27,7 @@ function checkSSL() {
       displaySSLResult(data);
     })
     .catch((error) => {
+      const resultDiv = document.getElementById("result");
       resultDiv.innerHTML = `<p class="text-red-500">An error occurred: ${error.message}</p>`;
     });
 }
@@ -33,12 +41,12 @@ function displaySSLResult(data) {
     .join("");
 
   resultDiv.innerHTML = `<ul class="grid md:grid-cols-2 text-left">
-      <li class="dark:bg-slate-700 text-black dark:text-white text-center text-xl font-bold py-2 px-4 md:col-span-2  border rounded-t-md">SSL Information</li>
-      <li class="border p-2"><strong>Host:</strong> ${data.host}</li>
-      <li class="border p-2"><strong>Port:</strong> ${data.port}</li>
-      <li class="border p-2"><strong>Protocol:</strong> ${data.protocol}</li>
-      <!-- Add more properties as needed -->
-      ${endpoints}
-      <li class="border p-2 md:col-span-2 rounded-b-md"><strong>User Agent:</strong> ${navigator.userAgent}</li>
-    </ul>`;
+          <li class="dark:bg-slate-700 text-black dark:text-white text-center text-xl font-bold py-2 px-4 md:col-span-2  border rounded-t-md">SSL Information</li>
+          <li class="border p-2"><strong>Host:</strong> ${data.host}</li>
+          <li class="border p-2"><strong>Port:</strong> ${data.port}</li>
+          <li class="border p-2"><strong>Protocol:</strong> ${data.protocol}</li>
+          <!-- Add more properties as needed -->
+          ${endpoints}
+          <li class="border p-2 md:col-span-2 rounded-b-md"><strong>User Agent:</strong> ${navigator.userAgent}</li>
+        </ul>`;
 }
