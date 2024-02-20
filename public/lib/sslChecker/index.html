@@ -37,8 +37,9 @@
             // Clear previous results
             clearResult();
 
-            // Call SSL Labs API
-            fetch(`https://api.ssllabs.com/api/v3/analyze?host=${domain}`)
+            const apiUrl = `https://api.ssllabs.com/api/v3/analyze?host=${domain}`;
+
+            fetch(apiUrl)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error("ERROR: Failed to fetch SSL information.");
