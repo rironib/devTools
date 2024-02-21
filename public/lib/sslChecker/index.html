@@ -4,33 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSL Checker</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <style>
-        /* Add custom styles if needed */
-    </style>
+    <link rel="icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon" />
+    <title>SSL Checker - TrickBuzz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="bg-gray-100 p-8">
-
     <div class="max-w-xl mx-auto bg-white p-6 rounded-md shadow-md">
-        <h1 class="text-2xl font-bold mb-4">SSL Checker</h1>
-
-        <div class="mb-4">
-            <label for="domain" class="block text-sm font-medium text-gray-600">Domain:</label>
-            <input type="text" id="domain" class="mt-1 p-2 w-full border rounded-md" value="google.com">
+        <h1 class="text-4xl text-center font-bold mb-4 pb-2 border-b-2 border-dashed">SSL Checker</h1>
+        <div class="flex flex-col gap-3 mb-4">
+            <input type="text" id="domain" class="mt-1 p-2 border rounded-md" placeholder="Enter domain name">
+            <button id="checkBtn" class="bg-blue-500 text-white p-2 rounded-md">Check SSL</button>
         </div>
-
-        <button id="checkBtn" class="bg-blue-500 text-white p-2 rounded-md">Check SSL</button>
-
-        <div id="result" class="mt-4"></div>
+        <div id="result" class="mt-4 pt-2 border-t-2 border-dashed"></div>
     </div>
 
     <script>
         document.getElementById("checkBtn").addEventListener("click", function () {
             const domain = document.getElementById("domain").value.trim();
             if (domain === "") {
-                alert("Please enter a valid domain.");
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Enter a valid domain!",
+                });
                 return;
             }
 
