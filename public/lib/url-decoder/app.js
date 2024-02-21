@@ -7,27 +7,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const outputText = document.getElementById("decodeResult");
 
   function isValidLinkFunction(input) {
-    const linkRegex = /^(http|https|ftp)%3A%2F%2F/;
+    const linkRegex = /^(http|https|ftp)/;
     return linkRegex.test(input);
   }
 
   decodeBtn.addEventListener("click", function () {
     const inputValue = inputText.value.trim();
-
     if (!inputValue) {
       showError("Input is empty!");
+      return;
+    }
+
+    const isValidLink = isValidLinkFunction(inputValue);
+    if (!isValidLink) {
+      showError("Invalid link!");
       return;
     }
 
     const isAlreadyDecoded = decodeURIComponent(inputValue) === inputValue;
     if (isAlreadyDecoded) {
       showError("Input is already decoded!");
-      return;
-    }
-
-    const isValidLink = !isValidLinkFunction(inputValue);
-    if (isValidLink) {
-      showError("Invalid link!");
       return;
     }
 

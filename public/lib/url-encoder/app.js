@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const outputText = document.getElementById("encodeResult");
 
   function isValidLinkFunction(input) {
-    const linkRegex = /^(http|https|ftp):\/\//;
+    const linkRegex = /^(http|https|ftp)/;
     return linkRegex.test(input);
   }
 
@@ -19,15 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const isAlreadyEncoded = encodeURIComponent(inputValue) === inputValue;
-    if (isAlreadyEncoded) {
-      showError("Input is already encoded!");
-      return;
-    }
-
     const isValidLink = isValidLinkFunction(inputValue);
     if (!isValidLink) {
       showError("Invalid link!");
+      return;
+    }
+
+    const isAlreadyDecoded = decodeURIComponent(inputValue) === inputValue;
+    if (!isAlreadyDecoded) {
+      showError("Link is already encoded!");
       return;
     }
 
