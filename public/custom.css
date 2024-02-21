@@ -16,3 +16,15 @@ body {
     letter-spacing: 2.5px;
   }
 }
+
+.adsbygoogle {
+  text-align: center;
+}
+.ads {
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}

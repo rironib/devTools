@@ -12,7 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const decryptedText = atob(base64Text);
       outputText.innerText = decryptedText;
     } catch (error) {
-      outputText.innerText = "Error: Invalid Base64 encoded text";
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Invalid Base64 encoded text",
+      });
     }
   });
 
@@ -23,13 +27,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   copyBtn.addEventListener("click", function () {
-    const range = document.createRange();
-    range.selectNode(outputText);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-    alert("Text copied to clipboard");
+    if (outputText.value === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Decode something!",
+      });
+      return;
+    } else {
+      const outputTextElement = document.getElementById("outputText");
+      const textToCopy =
+        outputTextElement.textContent || outputTextElement.innerText;
+
+      navigator.clipboard
+        .writeText(textToCopy)
+        .then(() => {
+          Swal.fire({
+            icon: "success",
+            title: "Done...",
+            text: "Text copied successfully!",
+          });
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Unable to copy text to clipboard",
+          });
+        });
+    }
   });
 
   resetBtn.addEventListener("click", function () {
