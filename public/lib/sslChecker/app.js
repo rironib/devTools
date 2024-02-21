@@ -1,52 +1,59 @@
-function checkSSL() {
-  const resultDiv = document.getElementById("result");
+document.getElementById("checkBtn").addEventListener("click", function () {
+  const domain = document.getElementById("domain").value.trim();
+  if (domain === "") {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Enter a valid domain!",
+    });
+    return;
+  }
 
-  // Handle the "Check" button click
-  document.getElementById("checkBtn").addEventListener("click", function () {
-    const domain = document.getElementById("domain-name").value;
-    if (!domain) {
-      resultDiv.innerHTML =
-        '<p class="text-red-500">Please enter a domain.</p>';
-      return;
-    }
-    getDomainInfo(domain);
-  });
-}
+  // Clear previous results
+  clearResult();
 
-function getDomainInfo(domain) {
   const apiUrl = `https://api.ssllabs.com/api/v3/analyze?host=${domain}`;
 
   fetch(apiUrl)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("ERROR: Failed to fetch domain information.");
+        throw new Error("ERROR: Failed to fetch SSL information.");
       }
       return response.json();
     })
     .then((data) => {
-      displaySSLResult(data);
+      displaySSLInformation(data);
     })
     .catch((error) => {
-      const resultDiv = document.getElementById("result");
-      resultDiv.innerHTML = `<p class="text-red-500">An error occurred: ${error.message}</p>`;
+      console.error(error);
+      displayErrorMessage("ERROR: Failed to fetch SSL information.");
     });
+});
+
+function displaySSLInformation(data) {
+  const result = document.getElementById("result");
+  const grade = data.endpoints[0].grade;
+
+  result.innerHTML = `<div class="bg-green-100 p-4 rounded-md">
+<p class="text-lg font-bold">SSL Information for ${data.host}:</p>
+<p class="mb-2"><strong>Grade:</strong> ${grade}</p>
+<p class="mb-2"><strong>Details:</strong> ${data.endpoints[0].details}</p>
+<p class="mb-2"><strong>Protocol:</strong> ${data.endpoints[0].details.protocols[0]}</p>
+<p class="mb-2"><strong>Cipher Suite:</strong> ${data.endpoints[0].details.suites[0].name}</p>
+</div>`;
 }
 
-function displaySSLResult(data) {
-  const resultDiv = document.getElementById("result");
-  const endpoints = data.endpoints
-    .map((endpoint) => {
-      return `<p>IP Address: ${endpoint.ipAddress} - Grade: ${endpoint.grade}</p>`;
-    })
-    .join("");
+function displayErrorMessage(message) {
+  const result = document.getElementById("result");
+  result.innerHTML = `<p class="text-red-500">${message}</p>`;
+}
 
-  resultDiv.innerHTML = `<ul class="grid md:grid-cols-2 text-left">
-          <li class="dark:bg-slate-700 text-black dark:text-white text-center text-xl font-bold py-2 px-4 md:col-span-2  border rounded-t-md">SSL Information</li>
-          <li class="border p-2"><strong>Host:</strong> ${data.host}</li>
-          <li class="border p-2"><strong>Port:</strong> ${data.port}</li>
-          <li class="border p-2"><strong>Protocol:</strong> ${data.protocol}</li>
-          <!-- Add more properties as needed -->
-          ${endpoints}
-          <li class="border p-2 md:col-span-2 rounded-b-md"><strong>User Agent:</strong> ${navigator.userAgent}</li>
-        </ul>`;
+function clearResult() {
+  const result = document.getElementById("result");
+  result.innerHTML = "";
+}
+
+function reset() {
+  document.getElementById("domain").value = "";
+  document.getElementById("result").innerHTML = "";
 }
