@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const decryptBtn = document.getElementById("decryptBtn");
   const pasteBtn = document.getElementById("pasteBtn");
   const copyBtn = document.getElementById("copyBtn");
-  const downloadBtn = document.getElementById("resetBtn");
+  const resetBtn = document.getElementById("resetBtn");
   const outputText = document.getElementById("outputText");
 
   decryptBtn.addEventListener("click", function () {

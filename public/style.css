@@ -690,10 +690,6 @@ video {
   margin-left: 0.5rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .ms-2 {
   margin-inline-start: 0.5rem;
 }
@@ -758,24 +754,12 @@ video {
   display: none;
 }
 
-.h-28 {
-  height: 7rem;
+.h-40 {
+  height: 10rem;
 }
 
 .h-\[80vh\] {
   height: 80vh;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.h-40 {
-  height: 10rem;
 }
 
 .max-h-24 {
@@ -793,10 +777,6 @@ video {
 .max-w-fit {
   max-width: -moz-fit-content;
   max-width: fit-content;
-}
-
-.max-w-md {
-  max-width: 28rem;
 }
 
 .max-w-screen-md {
