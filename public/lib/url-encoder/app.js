@@ -1,54 +1,82 @@
-function paste() {
-  navigator.clipboard.readText().then(function (pastedContent) {
-    document.getElementById("encode").value = pastedContent;
+document.addEventListener("DOMContentLoaded", function () {
+  const inputText = document.getElementById("encodeTxt");
+  const encodeBtn = document.getElementById("encodeBtn");
+  const pasteBtn = document.getElementById("pasteBtn");
+  const copyBtn = document.getElementById("copyBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const outputText = document.getElementById("encodeResult");
+
+  function isValidLinkFunction(input) {
+    const linkRegex = /^(http|https|ftp):\/\//;
+    return linkRegex.test(input);
+  }
+
+  encodeBtn.addEventListener("click", function () {
+    const inputValue = inputText.value.trim();
+
+    if (!inputValue) {
+      showError("Input is empty!");
+      return;
+    }
+
+    const isAlreadyEncoded = encodeURIComponent(inputValue) === inputValue;
+    if (isAlreadyEncoded) {
+      showError("Input is already encoded!");
+      return;
+    }
+
+    const isValidLink = isValidLinkFunction(inputValue);
+    if (!isValidLink) {
+      showError("Invalid link!");
+      return;
+    }
+
+    const encodedValue = encodeURIComponent(inputValue);
+    outputText.value = encodedValue;
   });
-}
 
-function encodeurl() {
-  var inputValue = document.getElementById("encode").value;
+  pasteBtn.addEventListener("click", function () {
+    navigator.clipboard.readText().then(function (clipboardText) {
+      inputText.value = clipboardText;
+    });
+  });
 
-  if (!inputValue || !isValidUrl(inputValue)) {
+  copyBtn.addEventListener("click", function () {
+    if (outputText.value === "") {
+      showError("Result is empty!");
+      return;
+    }
+    const outputTextElement = document.getElementById("encodeResult");
+    const textToCopy = outputTextElement.value;
+
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        showSuccess("Text copied successfully!");
+      })
+      .catch((err) => {
+        showError("Unable to copy text to clipboard!");
+      });
+  });
+
+  resetBtn.addEventListener("click", function () {
+    inputText.value = "";
+    outputText.value = "";
+  });
+
+  // Alerts
+  function showError(message) {
     Swal.fire({
       icon: "error",
       title: "Error!",
-      timer: 1500,
-      showConfirmButton: false,
+      text: message,
     });
-    return;
   }
-
-  var encodedValue = encodeURIComponent(inputValue);
-  document.getElementById("result").value = encodedValue;
-}
-
-function isValidUrl(url) {
-  try {
-    new URL(url);
-    return true;
-  } catch (error) {
-    return false;
+  function showSuccess(message) {
+    Swal.fire({
+      icon: "success",
+      title: "Done...",
+      text: message,
+    });
   }
-}
-
-function copy() {
-  var resultValue = document.getElementById("result").value;
-
-  var textArea = document.createElement("textarea");
-  textArea.value = resultValue;
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand("Copy");
-  document.body.removeChild(textArea);
-
-  Swal.fire({
-    icon: "success",
-    title: "Copied!",
-    timer: 1500,
-    showConfirmButton: false,
-  });
-}
-
-function reset() {
-  document.getElementById("encode").value = "";
-  document.getElementById("result").value = "";
-}
+});

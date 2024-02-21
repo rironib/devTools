@@ -1,56 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="https://app.trickbuzz.net/favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon" />
   <title>URL Encoder</title>
-
-  <!-- Stylesheets -->
-  <link type="text/css" href="https://app.trickbuzz.net/assets/css/bootstrap-5.2.3.min.css" rel="stylesheet" />
-  <link type="text/css" href="https://app.trickbuzz.net/assets/css/ads.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../custom.css">
+  <link rel="stylesheet" type="text/css" href="../../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737"
     data-overlays="bottom" crossorigin="anonymous" type="c4d9691b324e17574a509b8c-text/javascript"></script>
 </head>
 
-<body>
-  <nav class="navbar sticky-top bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="https://app.trickbuzz.net/">
-        <img src="https://app.trickbuzz.net/assets/img/logo.png" alt="TrickBuzz" width="auto" height="30" />
-      </a>
+<body class="bg-gray-100 dark:bg-slate-900 text-black dark:text-white">
+  <nav
+    class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+    <div class="max-w-8xl mx-auto">
+      <div class="mx-4 lg:mx-0 py-1 lg:py-2 lg:px-8 border-b border-slate-900/10 lg:border-0 dark:border-slate-300/10">
+        <a href="/" class="logo">TrickBuzz</a>
+      </div>
     </div>
   </nav>
 
-  <div class="container mt-5">
-    <form>
-      <div class="input-group my-2">
-        <input class="form-control py-3" id="encode" placeholder="Link">
+  <main class="container w-[95%] lg:w-[90%] mx-auto">
+    <div class="max-w-xl mx-auto my-4 bg-white dark:bg-gray-800 p-6 rounded-md shadow-md">
+      <h1 class="text-4xl text-center font-bold mb-4 pb-2 border-b-2 border-dashed">URL Encoder</h1>
+      <div>
+        <input type="text" id="encodeTxt"
+          class="block w-full rounded-md border-2 py-3 px-4 text-gray-900  placeholder:text-gray-400"
+          placeholder="Enter link">
+        <div class="flex flex-col md:flex-row gap-2 my-4 w-full">
+          <button id="encodeBtn" class="md:w-1/2 px-4 py-3 bg-blue-500 text-white rounded-md">Encode</button>
+          <button id="pasteBtn" class="md:w-1/2 px-4 py-3 bg-yellow-500 text-white rounded-md">Paste</button>
+        </div>
+        <input type="text" id="encodeResult"
+          class="block w-full rounded-md border-2 py-3 px-4 text-gray-900  placeholder:text-gray-400"
+          placeholder="Result" readonly>
+        <div class="flex flex-col md:flex-row gap-2 mt-4 w-full">
+          <button id="copyBtn" class="md:w-1/2 px-4 py-3 bg-green-500 text-white rounded-md">Copy</button>
+          <button id="resetBtn" class="md:w-1/2 px-4 py-3 bg-red-500 text-white rounded-md">Reset</button>
+        </div>
       </div>
-      <div class="d-flex justify-content-center gap-2 py-2">
-        <button type="button" class="btn btn-outline-secondary" onclick="paste()">
-          Paste
-        </button>
-        <button type="button" class="btn btn-outline-primary" onclick="encodeurl()">
-          Encode
-        </button>
-        <button type="button" class="btn btn-outline-success" onclick="copy()">
-          Copy
-        </button>
-        <button type="button" class="btn btn-outline-danger" onclick="reset()">
-          Clear
-        </button>
-      </div>
-      <div class="input-group my-2">
-        <input class="form-control py-3" id="result" placeholder="Result" readonly>
-      </div>
-    </form>
-  </div>
+    </div>
+  </main>
 
   <script src="app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>

@@ -43,11 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   copyBtn.addEventListener("click", function () {
     if (outputText.value === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Result is empty!",
-      });
+      showError("Result is empty!");
       return;
     }
     const outputTextElement = document.getElementById("decodeResult");
@@ -56,18 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
-        Swal.fire({
-          icon: "success",
-          title: "Done...",
-          text: "Text copied successfully!",
-        });
+        showSuccess("Text copied successfully!");
+        return;
       })
       .catch((err) => {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Unable to copy text to clipboard",
-        });
+        showError("Unable to copy text to clipboard!");
+        return;
       });
   });
 
