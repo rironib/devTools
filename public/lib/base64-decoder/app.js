@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   decryptBtn.addEventListener("click", function () {
     const base64Text = inputText.value;
+
+    if (!base64Text) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Input is empty",
+      });
+    }
+
     try {
       const decryptedText = atob(base64Text);
       outputText.innerText = decryptedText;

@@ -8,6 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   encryptBtn.addEventListener("click", function () {
     const plainText = inputText.value;
+
+    if (!plainText) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Input is empty",
+      });
+      return;
+    }
+
     const encryptedText = btoa(plainText);
     outputText.innerText = encryptedText;
   });
