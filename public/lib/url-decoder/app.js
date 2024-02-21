@@ -19,15 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const isValidLink = !isValidLinkFunction(inputValue);
-    if (isValidLink) {
-      showError("Invalid link!");
-      return;
-    }
-
     const isAlreadyDecoded = decodeURIComponent(inputValue) === inputValue;
     if (isAlreadyDecoded) {
       showError("Input is already decoded!");
+      return;
+    }
+
+    const isValidLink = !isValidLinkFunction(inputValue);
+    if (isValidLink) {
+      showError("Invalid link!");
       return;
     }
 
