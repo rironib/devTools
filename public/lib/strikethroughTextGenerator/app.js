@@ -1,64 +1,94 @@
-function clearStrikeThrough() {
-  // console.log("clear");
-  document.getElementById("strikeThroughTextArea").value = "";
-  document.getElementById("strikeThroughTextAreaResult").value = "";
-  document.getElementById("copyButton").innerHTML = "Copy";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("input");
+  const pasteBtn = document.getElementById("pasteBtn");
+  const copyBtn = document.getElementById("copyBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const downloadBtn = document.getElementById("downloadBtn");
+  const result = document.getElementById("result");
 
-function downloadFileStrikethrough() {
-  var textFile = null,
-    makeTextFile = function (text) {
-      var data = new Blob([text], { type: "text/plain" });
+  // Download
+  function download() {
+    let textFile = null,
+      makeTextFile = function (text) {
+        const data = new Blob([text], { type: "text/plain" });
+        if (textFile !== null) {
+          window.URL.revokeObjectURL(textFile);
+        }
+        textFile = window.URL.createObjectURL(data);
+        return textFile;
+      };
 
-      // If we are replacing a previously generated file we need to
-      // manually revoke the object URL to avoid memory leaks.
-      if (textFile !== null) {
-        window.URL.revokeObjectURL(textFile);
-      }
+    downloadBtn.addEventListener(
+      "click",
+      function () {
+        const link = document.createElement("a");
+        link.setAttribute("download", "StrikethroughText.txt");
+        link.href = makeTextFile(result.value);
+        document.body.appendChild(link);
+        window.requestAnimationFrame(function () {
+          const event = new MouseEvent("click");
+          link.dispatchEvent(event);
+          document.body.removeChild(link);
+        });
+      },
+      false
+    );
+  }
+  download();
 
-      textFile = window.URL.createObjectURL(data);
+  // Convert
+  input.addEventListener("input", function () {
+    result.value = Array.from(input.value)
+      .map((char) => char + "\u0336")
+      .join("");
+  });
 
-      return textFile;
-    };
-  var create = document.getElementById("create");
-  var strikeThroughTextAreaResult = document.getElementById(
-    "strikeThroughTextAreaResult"
-  );
+  // Paste
+  pasteBtn.addEventListener("click", function () {
+    navigator.clipboard.readText().then(function (clipboardText) {
+      input.value = clipboardText;
+    });
+  });
 
-  create.addEventListener(
-    "click",
-    function () {
-      var link = document.createElement("a");
-      link.setAttribute("download", "StrikethroughText.txt");
-      link.href = makeTextFile(strikeThroughTextAreaResult.value);
-      document.body.appendChild(link);
-      console.log("here");
-      // wait for the link to be added to the document
-      window.requestAnimationFrame(function () {
-        var event = new MouseEvent("click");
-        link.dispatchEvent(event);
-        document.body.removeChild(link);
+  // Copy
+  copyBtn.addEventListener("click", function () {
+    if (result.value === "") {
+      showError("Result is empty!");
+      return;
+    }
+    const resultElement = document.getElementById("result");
+    const textToCopy = resultElement.value;
+
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        showSuccess("Text copied successfully!");
+        return;
+      })
+      .catch((err) => {
+        showError("Unable to copy text to clipboard!");
+        return;
       });
-    },
-    false
-  );
-}
+  });
 
-function copyFunctionStrikeThrough() {
-  document.querySelector("#strikeThroughTextAreaResult").select();
-  // console.log(document.querySelector("textarea"));
-  document.execCommand("copy");
-  document.getElementById("copyButton").innerHTML = "Copied";
-}
+  // Reset
+  resetBtn.addEventListener("click", function () {
+    input.value = "";
+    result.value = "";
+  });
 
-function convertToStrikeThrough() {
-  // console.log('Jai Mata Di');
-  var text = document.getElementById("strikeThroughTextArea").value;
-  // console.log(text);
-  document.getElementById("strikeThroughTextAreaResult").value = text
-    .split("")
-    .map((char) => char + "\u0336")
-    .join("");
-  // console.log(text.split('').map(char => char + '\u0336').join(''));
-  // document.getElementById('copyButton').innerHTML = "Copy";
-}
+  function showError(message) {
+    Swal.fire({
+      icon: "error",
+      title: "Error!",
+      text: message,
+    });
+  }
+  function showSuccess(message) {
+    Swal.fire({
+      icon: "success",
+      title: "Done...",
+      text: message,
+    });
+  }
+});
