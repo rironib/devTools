@@ -22,7 +22,7 @@ const generatePalette = () => {
       "h-auto"
     );
 
-    color.innerHTML = `<div class='p-2 sm:p-1 text-center bg-white dark:bg-slate-700 hover:brightness-125 rounded-md overflow-hidden cursor-pointer'><div class="w-full h-auto min-h-36 sm:min-h-40 lg:min-h-48 border-2 border-slate-400 dark:border-slate-600 rounded-md" style="background: ${randomHex}"></div>
+    color.innerHTML = `<div class='p-2 sm:p-1 text-center bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 hover:dark:bg-slate-600 rounded-md overflow-hidden cursor-pointer'><div class="w-full h-auto min-h-36 sm:min-h-40 lg:min-h-48 border-2 border-slate-400 dark:border-slate-600 rounded-md" style="background: ${randomHex}"></div>
     <span class="hex-value block mt-3 mb-2 text-lg md:font-medium uppercase select-none">${randomHex}</span></div>`;
     color.addEventListener("click", () => copyColor(color, randomHex));
     container.appendChild(color);
