@@ -11,9 +11,18 @@ const generatePalette = () => {
 
     const color = document.createElement("div");
 
-    color.classList.add("min-w-48", "w-auto");
+    color.classList.add(
+      "min-w-36",
+      "sm:min-w-40",
+      "lg:min-w-48",
+      "min-h-36",
+      "sm:min-h-40",
+      "lg:min-h-48",
+      "w-auto",
+      "h-auto"
+    );
 
-    color.innerHTML = `<div class='m-2 p-2 sm:p-1 text-center bg-white dark:bg-slate-700 hover:brightness-125 rounded-md overflow-hidden cursor-pointer'><div class="w-full h-44 sm:h-48 border-2 border-slate-400 dark:border-slate-600 rounded-md" style="background: ${randomHex}"></div>
+    color.innerHTML = `<div class='p-2 sm:p-1 text-center bg-white dark:bg-slate-700 hover:brightness-125 rounded-md overflow-hidden cursor-pointer'><div class="w-full h-auto min-h-36 sm:min-h-40 lg:min-h-48 border-2 border-slate-400 dark:border-slate-600 rounded-md" style="background: ${randomHex}"></div>
     <span class="hex-value block mt-3 mb-2 text-lg md:font-medium uppercase select-none">${randomHex}</span></div>`;
     color.addEventListener("click", () => copyColor(color, randomHex));
     container.appendChild(color);
