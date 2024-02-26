@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon" />
-    <title>RGB to Hex Converter</title>
+    <title>RGBA to Hex Converter</title>
     <link rel="stylesheet" href="../../custom.css">
     <link rel="stylesheet" type="text/css" href="../../style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -24,15 +24,15 @@
 
     <main class="container w-[95%] lg:w-[90%] mx-auto">
         <div class="max-w-xl mx-auto my-4 bg-white dark:bg-gray-800 p-6 rounded-md shadow-md">
-            <h1 class="text-4xl text-center font-bold mb-4 pb-2 border-b-2 border-dashed">RGB to Hex Converter</h1>
+            <h1 class="text-4xl text-center font-bold mb-4 pb-2 border-b-2 border-dashed">RGBA to Hex Converter</h1>
             <div>
                 <div class="relative mt-2 rounded-md shadow-sm">
                     <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-                        <span class="sm:text-sm">RGB</span>
+                        <span class="sm:text-sm">RGBA</span>
                     </div>
-                    <input type="text" name="rgb" id="inputText" minlength="5" maxlength="11"
+                    <input type="text" name="rgb" id="inputText" minlength="5" maxlength="15"
                         class="w-full dark:bg-slate-700 p-3 pr-14 border border-gray-800 rounded"
-                        placeholder="255,255,255">
+                        placeholder="255,255,255,0.5">
                 </div>
                 <div class="flex flex-col md:flex-row gap-2 my-4 w-full">
                     <button id="convertBtn"
@@ -44,8 +44,8 @@
                         <span class="sm:text-sm">HEX</span>
                     </div>
                     <input type="text" name="hex" id="outputText"
-                        class="w-full dark:bg-slate-700 p-3 pr-10 border border-gray-800 rounded" placeholder="#FFFFFF"
-                        readonly>
+                        class="w-full dark:bg-slate-700 p-3 pr-10 border border-gray-800 rounded"
+                        placeholder="#FFFFFF80" readonly>
                 </div>
                 <div class="flex flex-col md:flex-row gap-2 mt-4 w-full">
                     <button id="copyBtn" class="md:w-1/2 px-4 py-3 bg-green-500 text-white rounded-md">Copy</button>
