@@ -1,105 +1,97 @@
-// Date: 31/08/2020
-// Author: Rohit Kumar
-// Website: www.iamrohit.in
+// Get elements from the DOM
+const birthdayInput = document.getElementById("birthday");
+const todayInput = document.getElementById("today");
+const resultContainer = document.getElementById("resultContainer");
 
-var mS = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-var dat = new Date();
-var curday = dat.getDate();
-var curmon = dat.getMonth() + 1;
-var curyear = dat.getFullYear();
-var startyear = dat.getFullYear() - 100;
-var endyear = dat.getFullYear();
-function checkleapyear(datea) {
-  if (datea.getYear() % 4 == 0) {
-    if (datea.getYear() % 10 != 0) {
-      return true;
-    } else {
-      if (datea.getYear() % 400 == 0) return true;
-      else return false;
-    }
+// Set today's date as the default value for the "Age as of" input field
+const todayDate = new Date();
+const year = todayDate.getFullYear();
+const month = String(todayDate.getMonth() + 1).padStart(2, "0");
+const day = String(todayDate.getDate()).padStart(2, "0");
+const formattedTodayDate = `${year}-${month}-${day}`;
+todayInput.value = formattedTodayDate;
+
+// Function to calculate the age
+function calculate() {
+  const birthday = new Date(birthdayInput.value);
+  const today = new Date(todayInput.value);
+
+  if (isNaN(birthday.getTime()) || isNaN(today.getTime())) {
+    showError("Invalid date. Please enter valid dates.");
+    return;
   }
-  return false;
+
+  // Calculate the difference in milliseconds
+  const ageInMilliseconds = today - birthday;
+
+  // Convert milliseconds to years, months, and days
+  const ageDate = new Date(ageInMilliseconds);
+  const years = ageDate.getUTCFullYear() - 1970;
+  const months = ageDate.getUTCMonth();
+  const days = ageDate.getUTCDate() - 1;
+
+  // Display the age
+  document.getElementById("year").innerText = years;
+  document.getElementById("month").innerText = months;
+  document.getElementById("day").innerText = days;
+
+  // Display the age in other units (optional)
+  displayAgeInOtherUnits(ageInMilliseconds);
+
+  // Remove the "hidden" class from resultContainer
+  resultContainer.removeAttribute("class");
 }
 
-function DaysInMonth(Y, M) {
-  with (new Date(Y, M, 1, 12)) {
-    setDate(0);
-    return getDate();
-  }
+// Function to reset the form
+function reset() {
+  birthdayInput.value = "";
+  todayInput.value = "";
+  resetAgeDisplay();
+
+  // Assign the "hidden" class to resultContainer
+  resultContainer.classList.add("hidden");
 }
 
-function datediff(date1, date2) {
-  var y1 = date1.getFullYear(),
-    m1 = date1.getMonth(),
-    d1 = date1.getDate(),
-    y2 = date2.getFullYear(),
-    m2 = date2.getMonth(),
-    d2 = date2.getDate();
-  if (d1 < d2) {
-    m1--;
-    d1 += DaysInMonth(y2, m2);
-  }
-  if (m1 < m2) {
-    y1--;
-    m1 += 12;
-  }
-  return [y1 - y2, m1 - m2, d1 - d2];
+// Function to display an error message using SweetAlert2
+function showError(message) {
+  Swal.fire({
+    icon: "error",
+    title: "Error",
+    text: message,
+  });
 }
 
-function calage() {
-  var calday =
-    document.birthday.day.options[document.birthday.day.selectedIndex].value;
-  var calmon =
-    document.birthday.month.options[document.birthday.month.selectedIndex]
-      .value;
-  var calyear =
-    document.birthday.year.options[document.birthday.year.selectedIndex].value;
-  if (
-    curday == "" ||
-    curmon == "" ||
-    curyear == "" ||
-    calday == "" ||
-    calmon == "" ||
-    calyear == ""
-  ) {
-    alert("please fill all the values..!!");
-  } else {
-    var curd = new Date(curyear, curmon - 1, curday);
-    var cald = new Date(calyear, calmon - 1, calday);
+// Function to reset the age display
+function resetAgeDisplay() {
+  document.getElementById("year").innerText = "00";
+  document.getElementById("month").innerText = "00";
+  document.getElementById("day").innerText = "00";
+  resetSingularExpression();
+}
 
-    var diff =
-      Date.UTC(curyear, curmon, curday, 0, 0, 0) -
-      Date.UTC(calyear, calmon, calday, 0, 0, 0);
-    var dife = datediff(curd, cald);
-    document.birthday.age.value =
-      dife[0] + " years, " + dife[1] + " months, and " + dife[2] + " days";
-    var monleft = dife[0] * 12 + dife[1];
-    var secleft = diff / 1000 / 60;
-    var hrsleft = secleft / 60;
-    var daysleft = hrsleft / 24;
-    document.birthday.months.value = monleft + " Month since your birth";
-    document.birthday.daa.value = daysleft + " days since your birth";
-    document.birthday.hours.value = hrsleft + " hours since your birth";
-    document.birthday.min.value = secleft + " minutes since your birth";
-    document.birthday.sec.value = secleft * 60 + " seconds since your birth";
-    var as = parseInt(calyear) + dife[0] + 1;
-    var diff =
-      Date.UTC(as, calmon, calday, 0, 0, 0) -
-      Date.UTC(curyear, curmon, curday, 0, 0, 0);
-    var datee = diff / 1000 / 60 / 60 / 24;
-    document.birthday.nbday.value = datee + " days left for your next birthday";
-  }
+// Function to display the age in other units (optional)
+function displayAgeInOtherUnits(milliseconds) {
+  const inMonth = Math.floor(milliseconds / (30.44 * 24 * 60 * 60 * 1000));
+  const inWeek = Math.floor(milliseconds / (7 * 24 * 60 * 60 * 1000));
+  const inDay = Math.floor(milliseconds / (24 * 60 * 60 * 1000));
+  const inHour = Math.floor(milliseconds / (60 * 60 * 1000));
+  const inMinute = Math.floor(milliseconds / (60 * 1000));
+  const inSecond = Math.floor(milliseconds / 1000);
+
+  document.getElementById("inMonth").innerText = inMonth;
+  document.getElementById("inWeek").innerText = inWeek;
+  document.getElementById("inDay").innerText = inDay;
+  document.getElementById("inHour").innerText = inHour;
+  document.getElementById("inMinute").innerText = inMinute;
+  document.getElementById("inSecond").innerText = inSecond;
+}
+
+// Function to reset the singular expression display
+function resetSingularExpression() {
+  document.getElementById("inMonth").innerText = "00";
+  document.getElementById("inWeek").innerText = "00";
+  document.getElementById("inDay").innerText = "00";
+  document.getElementById("inHour").innerText = "00";
+  document.getElementById("inMinute").innerText = "00";
+  document.getElementById("inSecond").innerText = "00";
 }
