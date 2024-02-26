@@ -10,21 +10,31 @@
     <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 
-<body class="font-sans">
-    <header class="bg-gray-800 text-white text-center py-5">
-        <h1 class="text-3xl font-bold">GUID Generator</h1>
-    </header>
-
-    <main class="max-w-screen-md mx-auto p-5">
-        <div class="output">
-            <textarea id="result" rows="1" placeholder="Generated text will appear here..."
-                class="w-full p-3 border border-gray-300 rounded-md" disabled></textarea>
+<body class="bg-gray-100 dark:bg-slate-900 text-black dark:text-white">
+    <nav
+        class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+        <div class="max-w-8xl mx-auto">
+            <div
+                class="mx-4 lg:mx-0 py-1 lg:py-2 lg:px-8 border-b border-slate-900/10 lg:border-0 dark:border-slate-300/10">
+                <a href="/" class="logo">TrickBuzz</a>
+            </div>
         </div>
-        <div class="flex justify-center flex-col lg:flex-row gap-4 mt-4">
-            <button id="generate" class="bg-gray-800 text-white font-bold py-2 px-4 rounded-md ml-2">Generate
-                GUID</button>
-            <button id="clear" class="bg-red-500 text-white font-bold py-2 px-4 rounded-md">Clear</button>
-            <button id="copy" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-md">Copy</button>
+    </nav>
+
+    <main class="container w-[95%] lg:w-[90%] mx-auto">
+        <div class="max-w-xl mx-auto my-4 bg-white dark:bg-gray-800 p-6 rounded-md shadow-md">
+            <h1 class="text-4xl text-center font-bold mb-4 pb-2 border-b-2 border-dashed">GUID Generator</h1>
+            <div>
+                <textarea type="text" name="rgb" id="result" rows="5"
+                    class="w-full dark:bg-slate-700 p-3 pr-14 border border-gray-800 rounded"
+                    placeholder="ba3e1663-ec0d-448c-a42d-81177ce61b05"></textarea>
+                <div class="flex flex-col md:flex-row gap-2 my-4 w-full">
+                    <button id="generateBtn"
+                        class="md:w-1/2 px-4 py-3 bg-blue-500 text-white rounded-md">Generate</button>
+                    <button id="copyBtn" class="md:w-1/2 px-4 py-3 bg-green-500 text-white rounded-md">Copy</button>
+                    <button id="resetBtn" class="md:w-1/2 px-4 py-3 bg-red-500 text-white rounded-md">Reset</button>
+                </div>
+            </div>
         </div>
     </main>
 
