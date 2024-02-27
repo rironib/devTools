@@ -2,102 +2,58 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://app.trickbuzz.net/favicon.png" type="image/x-icon" />
   <title>Case Converter</title>
-
-  <!-- Stylesheets -->
-  <link type="text/css" href="https://app.trickbuzz.net/assets/css/bootstrap-5.2.3.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../custom.css">
+  <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 
-<body>
-  <nav class="navbar sticky-top bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="https://app.trickbuzz.net/">
-        <img src="https://app.trickbuzz.net/assets/img/logo.png" alt="TrickBuzz" width="auto" height="30" />
-      </a>
+<body class="bg-gray-100 dark:bg-slate-900 text-black dark:text-white">
+  <nav
+    class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+    <div class="max-w-8xl mx-auto">
+      <div class="mx-4 lg:mx-0 py-1 lg:py-2 lg:px-8 border-b border-slate-900/10 lg:border-0 dark:border-slate-300/10">
+        <a href="/" class="logo">TrickBuzz</a>
+      </div>
     </div>
   </nav>
 
-
-  <div class="container">
-    <div class="row">
-      <div class="col p-2">
-        <form>
-          <div class="form-group text-center py-2">
-            <button type="button" class="btn btn-primary m-1" onclick="originalText()">
-              Original Text
-            </button>
-            <button type="button" class="btn btn-info text-light m-1" onclick="revert()">
-              Revert
-            </button>
-            <button type="button" class="btn btn-danger m-1" onclick="clearCaseConverter()">
-              Clear
-            </button>
-            <button type="button" id="copyButton" class="btn btn-success m-1" onclick="copyFunction()">
-              Copy
-            </button>
-            <button type="button" class="btn btn-secondary m-1" onclick="downloadFile()" id="create">
-              Download Text
-            </button>
-          </div>
-          <div class="form-group">
-            <textarea onchange="revertArray()" oninput="getOriginalText()" rows="12" id="caseConverterTextArea"
-              class="form-control" placeholder="Paste Text Here Or Start Typing" spellcheck="false"></textarea>
-          </div>
-          <div class="form-group text-center py-2">
-            <button type="button" class="btn btn-outline-primary m-1" onclick="lowerCase()">
-              lower case
-            </button>
-            <button type="button" class="btn btn-outline-secondary m-1" onclick="upperCase()">
-              UPPER CASE
-            </button>
-            <button type="button" class="btn btn-outline-success m-1" onclick="sentenceCase()">
-              Sentence case
-            </button>
-            <button type="button" class="btn btn-outline-danger m-1" onclick="capitalizedCase()">
-              Capitalized Case
-            </button>
-            <button type="button" class="btn btn-outline-info m-1" onclick="pascalCase()">
-              PascalCase
-            </button>
-            <button type="button" class="btn btn-outline-dark m-1" onclick="alternateCase()">
-              aLtErNaTe CaSe
-            </button>
-            <button type="button" class="btn btn-outline-primary m-1" onclick="inverseCase()">
-              iNVERSE cASE
-            </button>
-            <button type="button" class="btn btn-outline-success m-1" onclick="snakeCase()">
-              SNAKE_CASE
-            </button>
-            <button type="button" class="btn btn-outline-danger m-1" onclick="camelCase()">
-              camelCase
-            </button>
-          </div>
-        </form>
+  <main class="container w-[95%] lg:w-[90%] mx-auto">
+    <div class="max-w-4xl mx-auto my-4 bg-white dark:bg-gray-800 p-6 rounded-md shadow-md">
+      <h1 class="text-4xl text-center font-bold mb-4 pb-2 border-b-2 border-dashed">Case Converter</h1>
+      <div>
+        <textarea id="inputText" rows="10" class="w-full dark:bg-slate-700 py-3 px-4 border border-gray-800 rounded"
+          placeholder="Input..."></textarea>
+        <div class="my-4 w-full">
+          <button id="pasteBtn" class="w-full px-4 py-3 bg-yellow-500 text-white rounded-md">Paste</button>
+        </div>
+        <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
+          <button id="lowerCase" class="px-4 py-3 bg-emerald-500 text-white rounded-md">lower case</button>
+          <button id="upperCase" class="px-4 py-3 bg-sky-500 text-white rounded-md">UPPER CASE</button>
+          <button id="sentenceCase" class="px-4 py-3 bg-purple-500 text-white rounded-md">Sentence case</button>
+          <button id="capitalizedCase" class="px-4 py-3 bg-teal-500 text-white rounded-md">Capitalized
+            Case</button>
+          <button id="pascalCase" class="px-4 py-3 bg-indigo-500 text-white rounded-md">PascalCase</button>
+          <button id="alternateCase" class="px-4 py-3 bg-fuchsia-500 text-white rounded-md">aLtErNaTe
+            CaSe</button>
+          <button id="inverseCase" class="px-4 py-3 bg-lime-500 text-white rounded-md">iNVERSE cASE</button>
+          <button id="snakeCase" class="px-4 py-3 bg-cyan-500 text-white rounded-md">SNAKE_CASE</button>
+          <button id="camelCase" class="px-4 py-3 bg-orange-500 text-white rounded-md">camelCase</button>
+        </div>
+        <textarea id="outputText" rows="10" class="w-full dark:bg-slate-700 py-3 px-4 border border-gray-800 rounded"
+          placeholder="Result..." readonly></textarea>
+        <div class="flex flex-col md:flex-row gap-2 mt-4 w-full">
+          <button id="copyBtn" class="md:w-1/2 px-4 py-3 bg-blue-500 text-white rounded-md">Copy</button>
+          <button id="downloadBtn" class="md:w-1/2 px-4 py-3 bg-violet-500 text-white rounded-md">Download</button>
+          <button id="resetBtn" class="md:w-1/2 px-4 py-3 bg-red-500 text-white rounded-md">Reset</button>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <footer class="footer mt-5 py-3" style="background-color: #374f64">
-    <div class="container text-light text-center">
-      &copy;
-      <script>
-        document.write(new Date().getFullYear());
-      </script>
-      <a class="link-light text-decoration-none fw-bold" href="https://trickbuzz.net/" target="_blank">TrickBuzz
-        Inc.</a>
-      All Rights Reserved.
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script src="https://app.trickbuzz.net/assets/js/jquery-3.6.1.js"></script>
-  <script src="https://app.trickbuzz.net/assets/js/popper-1.16.0.min.js"></script>
-  <script src="https://app.trickbuzz.net/assets/js/bootstrap-5.2.3.min.js"></script>
-
+  <script src="app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737"
     data-overlays="bottom" crossorigin="anonymous" type="c4d9691b324e17574a509b8c-text/javascript"></script>
