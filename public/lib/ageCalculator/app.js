@@ -44,8 +44,8 @@ function calculate() {
 
 // Function to reset the form
 function reset() {
-  birthdayInput.value = "";
-  todayInput.value = "";
+  birthdayInput.value = "2000-12-31";
+  todayInput.value = formattedTodayDate;
   resetAgeDisplay();
 
   // Assign the "hidden" class to resultContainer
