@@ -26,16 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Copy
   copyBtn.addEventListener("click", function () {
-    outputText.select();
+    if (outputText.value === "") {
+      showError("Result is empty!");
+      return;
+    }
+    const resultElement = document.getElementById("outputText");
+    const textToCopy = resultElement.value;
+
     navigator.clipboard
-      .writeText(outputText.value)
+      .writeText(textToCopy)
       .then(() => {
-        console.log("Text copied to clipboard");
+        showSuccess("Text copied successfully!");
       })
       .catch((err) => {
-        console.error("Unable to copy text to clipboard", err);
+        showError("Unable to copy text to clipboard!");
       });
   });
 
@@ -125,4 +130,20 @@ document.addEventListener("DOMContentLoaded", function () {
       .join("");
     outputText.value = camelCased;
   });
+
+  // Alerts
+  function showError(message) {
+    Swal.fire({
+      icon: "error",
+      title: "Error!",
+      text: message,
+    });
+  }
+  function showSuccess(message) {
+    Swal.fire({
+      icon: "success",
+      title: "Done...",
+      text: message,
+    });
+  }
 });

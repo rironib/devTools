@@ -63,11 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .writeText(textToCopy)
       .then(() => {
         showSuccess("Text copied successfully!");
-        return;
       })
       .catch((err) => {
         showError("Unable to copy text to clipboard!");
-        return;
       });
   });
 
@@ -77,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     result.value = "";
   });
 
+  // Alerts
   function showError(message) {
     Swal.fire({
       icon: "error",
