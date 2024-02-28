@@ -9,37 +9,52 @@
 
 <url>
   <loc>https://app.trickbuzz.net/</loc>
-  <lastmod>2024-02-04T17:38:54+00:00</lastmod>
+  <lastmod>2024-02-27T14:17:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/ageCalculator/</loc>
-  <lastmod>2024-01-31T16:39:58+00:00</lastmod>
+  <lastmod>2024-02-27T07:39:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://app.trickbuzz.net/lib/px-rem/</loc>
-  <lastmod>2024-02-03T18:13:49+00:00</lastmod>
+  <loc>https://app.trickbuzz.net/lib/px-to-rem/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://app.trickbuzz.net/lib/base64Encrypter/</loc>
-  <lastmod>2024-02-03T18:54:02+00:00</lastmod>
+  <loc>https://app.trickbuzz.net/lib/rem-to-px/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://app.trickbuzz.net/lib/base64Decrypter/</loc>
-  <lastmod>2024-02-03T18:54:02+00:00</lastmod>
+  <loc>https://app.trickbuzz.net/lib/rgb-to-hex/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://app.trickbuzz.net/lib/rgba-to-hex/</loc>
+  <lastmod>2024-02-26T08:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://app.trickbuzz.net/lib/base64-encoder/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://app.trickbuzz.net/lib/base64-decoder/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/converter/</loc>
-  <lastmod>2024-01-31T16:31:18+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/caseConverter/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+  <lastmod>2024-02-27T10:56:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -54,7 +69,7 @@
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/wordCounter/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -94,22 +109,22 @@
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/iframeGenerator/</loc>
-  <lastmod>2024-01-31T16:31:18+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/textGenerator/</loc>
-  <lastmod>2024-01-31T16:50:00+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/loremIpsumGenerator/</loc>
-  <lastmod>2024-01-31T16:31:18+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/guidGenerator/</loc>
-  <lastmod>2024-01-31T16:31:18+00:00</lastmod>
+  <lastmod>2024-02-26T08:17:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -124,12 +139,12 @@
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/strikethroughTextGenerator/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/upsideDownTextGenerator/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -154,7 +169,7 @@
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/colorPicker/</loc>
-  <lastmod>2024-02-04T17:38:54+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -164,12 +179,12 @@
 </url>
 <url>
   <loc>https://app.trickbuzz.net/cn/colorPalette/</loc>
-  <lastmod>2024-02-04T17:38:54+00:00</lastmod>
+  <lastmod>2024-02-23T08:58:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/exifReader/</loc>
-  <lastmod>2024-01-31T16:33:54+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -179,27 +194,32 @@
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/radio/</loc>
-  <lastmod>2024-01-31T16:42:00+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/ipAnalyzer/</loc>
-  <lastmod>2024-02-03T17:15:12+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://app.trickbuzz.net/lib/sslChecker/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://app.trickbuzz.net/lib/signatureMaker/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://app.trickbuzz.net/lib/urlEncoder/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+  <loc>https://app.trickbuzz.net/lib/url-encoder/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://app.trickbuzz.net/lib/urlDecoder/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+  <loc>https://app.trickbuzz.net/lib/url-decoder/</loc>
+  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
