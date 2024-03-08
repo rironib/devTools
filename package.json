@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "PostCSS Github Repository",
   "main": "index.js",
+  "scripts": {},
   "keywords": [],
   "author": "RONiB",
   "license": "MIT",
