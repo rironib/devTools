@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "PostCSS Github Repository",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build-t": "tailwindcss -i ./src/tailwind.css -o ./public/style.css -w",
+    "build-p": "postcss ./src/tailwind.css -o ./public/style.css -w"
+  },
   "keywords": [],
   "author": "RONiB",
   "license": "MIT",
