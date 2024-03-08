@@ -4,7 +4,7 @@
   "description": "<h1 align=\"center\">Welcome</h1>",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/tailwind.css -o ./public/style.css --watch"
+    "build-t": "npx tailwindcss -i ./src/tailwind.css -o ./public/style.css --watch"
   },
   "keywords": [],
   "author": "",
