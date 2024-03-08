@@ -1,267 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 
-<url>
-  <loc>https://app.trickbuzz.net/</loc>
-  <lastmod>2024-02-27T14:17:10+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/ageCalculator/</loc>
-  <lastmod>2024-02-27T07:39:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/px-to-rem/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/rem-to-px/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/rgb-to-hex/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/rgba-to-hex/</loc>
-  <lastmod>2024-02-26T08:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/base64-encoder/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/base64-decoder/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/converter/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/caseConverter/</loc>
-  <lastmod>2024-02-27T10:56:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/CurrencyConverter/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/TextToSpeechConverter/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/wordCounter/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/dictionary/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/translator/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/notebook/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/TodoListApp/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/SaveTextAsFile/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/TypingSpeedTest/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cp/TypingHero/</loc>
-  <lastmod>2024-01-31T07:48:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/iframeGenerator/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/textGenerator/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/loremIpsumGenerator/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/guidGenerator/</loc>
-  <lastmod>2024-02-26T08:17:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/QuoteGenerator/</loc>
-  <lastmod>2024-01-31T07:59:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/QRCodeGenerator/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/strikethroughTextGenerator/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/upsideDownTextGenerator/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/PasswordGenerator/</loc>
-  <lastmod>2024-01-31T17:16:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/ImageEditor/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/ImageResizer/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/DrawingApp/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/colorPicker/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/gradientGenerator/</loc>
-  <lastmod>2024-02-04T17:38:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/colorPalette/</loc>
-  <lastmod>2024-02-23T08:58:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/exifReader/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/QRCodeReader/</loc>
-  <lastmod>2024-01-31T07:54:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/radio/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/ipAnalyzer/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/sslChecker/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/signatureMaker/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/url-encoder/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/lib/url-decoder/</loc>
-  <lastmod>2024-02-26T07:58:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/BudgetTracker/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/Weather/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/MemoryCardsOne/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/MemoryCardsTwo/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/QuizApp/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/TicTacToe/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/WordGuessing/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://app.trickbuzz.net/cn/WordScramble/</loc>
-  <lastmod>2024-01-31T07:19:06+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://app.trickbuzz.net/</loc>
+    <lastmod>2024-02-27T14:17:10+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/ageCalculator/</loc>
+    <lastmod>2024-02-27T07:39:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/px-to-rem/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/rem-to-px/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/rgb-to-hex/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/rgba-to-hex/</loc>
+    <lastmod>2024-02-26T08:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/base64-encoder/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/base64-decoder/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/converter/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/caseConverter/</loc>
+    <lastmod>2024-02-27T10:56:24+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/CurrencyConverter/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/TextToSpeechConverter/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/wordCounter/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/dictionary/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/translator/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/notebook/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/TodoListApp/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/SaveTextAsFile/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/TypingSpeedTest/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cp/TypingHero/</loc>
+    <lastmod>2024-01-31T07:48:28+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/iframeGenerator/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/textGenerator/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/loremIpsumGenerator/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/guidGenerator/</loc>
+    <lastmod>2024-02-26T08:17:08+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/QuoteGenerator/</loc>
+    <lastmod>2024-01-31T07:59:56+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/QRCodeGenerator/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/strikethroughTextGenerator/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/upsideDownTextGenerator/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/PasswordGenerator/</loc>
+    <lastmod>2024-01-31T17:16:47+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/ImageEditor/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/ImageResizer/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/DrawingApp/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/colorPicker/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/gradientGenerator/</loc>
+    <lastmod>2024-02-04T17:38:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/colorPalette/</loc>
+    <lastmod>2024-02-23T08:58:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/exifViewer/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/QRCodeReader/</loc>
+    <lastmod>2024-01-31T07:54:32+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/radio/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/ipAnalyzer/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/sslChecker/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/signatureMaker/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/url-encoder/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/lib/url-decoder/</loc>
+    <lastmod>2024-02-26T07:58:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/BudgetTracker/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/Weather/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/MemoryCardsOne/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/MemoryCardsTwo/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/QuizApp/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/TicTacToe/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/WordGuessing/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://app.trickbuzz.net/cn/WordScramble/</loc>
+    <lastmod>2024-01-31T07:19:06+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
 
 
 </urlset>

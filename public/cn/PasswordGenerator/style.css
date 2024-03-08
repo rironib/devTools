@@ -19,6 +19,20 @@ body {
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
+@media screen and (max-width: 480px) {
+  body {
+    padding: 1rem 0;
+  }
+  .container {
+    width: 90%;
+  }
+  .pass-settings .options {
+    flex-direction: column;
+  }
+  .pass-settings .options .option {
+    width: 100% !important;
+  }
+}
 .container h2 {
   font-weight: 600;
   font-size: 1.31rem;
