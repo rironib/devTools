@@ -35,7 +35,7 @@ function displaySSLInformation(data) {
       <li><strong>SSL Provider:</strong> ${data.provider}</li>
       <li><strong>Issued:</strong> ${data.issued}</li>
       <li><strong>Expires:</strong> ${data.expires}</li>
-      <li><strong>Expires in:</strong> ${data.daysLeft} Days</li>
+      <li class="rounded-b-md"><strong>Expires in:</strong> ${data.daysLeft} Days</li>
     </ul>
   </div>`;
 }
