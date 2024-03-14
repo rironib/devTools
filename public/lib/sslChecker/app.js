@@ -2,7 +2,6 @@ const fetchData = async (domain) => {
   try {
     const res = await fetch(`https://sslcheckerapi.vercel.app/${domain}`); // my own api
     const data = await res.json();
-    console.log(data);
     displaySSLInformation(data);
   } catch (error) {
     result.innerHTML = `<div class="text-red-800">${error.message}</div>`;
