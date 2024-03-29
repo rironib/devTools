@@ -18,10 +18,13 @@
 <body class="bg-gray-100 dark:bg-slate-900 text-black dark:text-white">
     <nav
         class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
-        <div class="max-w-8xl mx-auto">
-            <div
-                class="mx-4 lg:mx-0 py-1 lg:py-2 lg:px-8 border-b border-slate-900/10 lg:border-0 dark:border-slate-300/10">
+        <div class="w-[95%] lg:w-[90%] container mx-auto flex justify-between">
+            <div class="py-1 lg:py-2 border-b border-slate-900/10 lg:border-0 dark:border-slate-300/10">
                 <a href="/" class="logo">TrickBuzz</a>
+            </div>
+            <div id="theme" class="text-xl flex items-center gap-2 text-gray-500 dark:text-gray-400 cursor-pointer">
+                <i id="light" class="ri-sun-fill hidden"></i>
+                <i id="dark" class="ri-moon-fill hidden"></i>
             </div>
         </div>
     </nav>
@@ -380,6 +383,7 @@
             ⓒ <span id="year">2024</span> <a href="/">TrickBuzz</a> | All Rights Reserved</div>
     </footer>
 
+    <script src="assets/js/theme.js"></script>
     <script src="assets/js/date.js"></script>
     <script src="assets/js/filter.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737"
